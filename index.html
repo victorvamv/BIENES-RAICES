@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 <body>
     <header class="header inicio">
-        <div class="contenedor contenido-header">
+        <div class="container contenido-header">
             <div class="barra">
                 <a href="index.html">
                     <img src="build/img/logo.svg" alt="Logotipo Bienes Raices">
@@ -25,24 +25,24 @@
     </header>
     <main class="container seccion">
         <h1>Más Sobre Nosotros</h1>
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
-            <div class="icono col">
+        <div class="row justify-content-center row-gap-3 row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+            <div class="icono col mt-5">
                 <img src="assets/icons/house-lock-fill.svg" alt="Icono seguridad" loading="lazy">
-                <h3>Seguridad</h3>
+                <h3 class="mt-3">Seguridad</h3>
                 <p>Nullam vel massa vel purus tempor dapibus ac non justo. 
                 Donec tristique magna vel vulputate ultricies. 
                 Etiam at ullamcorper mi.</p>
             </div>
-            <div class="icono col">
+            <div class="icono col mt-5">
                 <img src="assets/icons/cash-stack.svg" alt="Icono Precio" loading="lazy">
-                <h3>Precio</h3>
+                <h3 class="mt-3">Precio</h3>
                 <p>Nullam vel massa vel purus tempor dapibus ac non justo. 
                 Donec tristique magna vel vulputate ultricies. 
                 Etiam at ullamcorper mi.</p>
             </div>
-            <div class="icono col">
+            <div class="icono col-md-6 mt-5">
                 <img src="assets/icons/clock-fill.svg" alt="Icono Tiempo" loading="lazy">
-                <h3>Tiempo</h3>
+                <h3 class="mt-3">Tiempo</h3>
                 <p>Nullam vel massa vel purus tempor dapibus ac non justo. 
                 Donec tristique magna vel vulputate ultricies. 
                 Etiam at ullamcorper mi.</p>
@@ -50,8 +50,45 @@
         </div>
     </main>
 
+    
+
+    <section class="container">
+        <h2>Casas y Departamentos en Venta</h2>
+        <div class="row justify-content-center row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <div class="col mt-5">
+                <div class="card">
+                    <img src="build/img/anuncio1.jpg" class="card-img-top" alt="Imagen 1">
+                    <div class="card-body">
+                        <div class="h5">Titulo Carta Uno</div>
+                        <p>Talvez aqui iria el texto</p>
+                    </div> <!--.card-body-->
+                </div> <!--.card-->
+            </div> <!--.col-->
+
+            <div class="col mt-5">
+                <div class="card h-100">
+                    <img src="build/img/anuncio2.jpg" class="card-img-top" alt="Imagen 2">
+                    <div class="card-body">
+                        <div class="h5">Titulo Carta Uno</div>
+                        <p>Talvez aqui iria el texto</p>
+                    </div> <!--.card-body-->
+                </div> <!--.card-->
+            </div> <!--.col-->
+
+            <div class="col mt-5">
+                <div class="card h-100">
+                    <img src="build/img/anuncio3.jpg" class="card-img-top" alt="Imagen 3">
+                    <div class="card-body">
+                        <div class="h5">Titulo Carta Uno</div>
+                        <p>Talvez aqui iria el texto</p>
+                    </div> <!--.card-body-->
+                </div> <!--.card-->
+            </div> <!--.col-->
+        </div> <!--.row-->
+    </section>
+
     <footer class="footer seccion">
-        <div class="contenedor contenendor-footer">
+        <div class="container contenendor-footer">
             <nav class="navegacion">
                 <a href="nosotros.html">Nosotros</a>
                 <a href="anuncios.html">Anuncios</a>
@@ -59,7 +96,7 @@
                 <a href="contacto.html">Contacto</a>
             </nav> 
         </div>
-        <p class="copyright">Todos los Derechos Reservados 2023</p>
+        <p class="text-center text-white">Todos los Derechos Reservados 2023</p>
     </footer>
     <script src="build/js/bundle.min.js"></script>
 </body>
