@@ -34,24 +34,69 @@
             <img loading="lazy" src="build/img/destacada3.jpg" alt="Imagen Contacto">
         </picture>
 
-        <h2>Llene el formulario de Contacto</h2>
+        <h2 class="p-3">Llene el formulario de Contacto</h2>
 
         <form class="col-6">
-            <fieldset class="border border-black p-3">
-                <legend>Informacion Personal</legend>
+            <fieldset class="border border-black p-3 fs-3">
+                <legend class="fs-3">Informacion Personal</legend>
 
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" placeholder="Tu Nombre" id="nombre">
+                <input type="text" class="form-control fs-3" placeholder="Tu Nombre" id="nombre">
 
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" placeholder="Tu Email" id="email">
+                <input type="email" class="form-control fs-3" placeholder="Tu Email" id="email">
 
                 <label for="telefono" class="form-label">Telefono</label>
-                <input type="tel" class="form-control" placeholder="Tu Telefono" id="telefono">
+                <input type="tel" class="form-control fs-3" placeholder="Tu Telefono" id="telefono">
 
                 <label for="mensaje" class="form-label">Mensaje:</label>
-                <textarea class="form-control" id="mensaje" rows="4"></textarea>
+                <textarea class="form-control fs-3" id="mensaje" rows="4"></textarea>
             </fieldset>
+
+            <fieldset class="border border-black mt-4 p-3 fs-3">
+                <legend class="fs-3">Información sobre la propiedad</legend>
+                <select class="form-select fs-3" aria-label="Default select example">
+                    <label>Vende o Compra:</label>
+                    <option value="1" selected disabled>-- Seleccione --</option>
+                    <option value="2">Compra</option>
+                    <option value="3">Vende</option>
+                </select>
+
+                <label>Precio o Presupuesto</label>
+                <input type="number" class="form-control fs-3" placeholder="Tu Precio o Presuspuesto" id="presupuesto">
+
+            </fieldset>
+
+            <fieldset class="border border-black mt-4 p-3 fs-3 mb-3">
+                <legend class="fs-3">Información sobre la propiedad</legend>
+
+                <p class="fs-3">Como desea se contactado</p>
+                <div class="d-flex align-items-center px-5">
+                    <div class="form-check px-5">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label px-5" for="flexRadioDefault1">
+                            Teléfono
+                        </label>
+                    </div>
+                    <div class="form-check px-5">    
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label px-5" for="flexRadioDefault2">
+                            E-mail
+                        </label>
+                    </div>
+                </div>
+
+                <p class="fs-3">Si eligió teléfono, elijo la fecha y la hora</p>
+               
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" class="form-control fs-3">
+
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" min="09:00" max="18:00" class="form-control fs-3">    
+
+            </fieldset>
+
+            <button class="btn btn-primary btn-lg fs-3 px-5 py-3" type="submit">Enviar</button>
         </form>
         
     </main>
