@@ -36,18 +36,33 @@
 
         <h2 class="p-3">Llene el formulario de Contacto</h2>
 
-        <form class="col-6">
+        <form class="col-6 was-validated" novalidate>
             <fieldset class="border border-black p-3 fs-3">
                 <legend class="fs-3">Informacion Personal</legend>
 
+                <div class="position-relative">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control fs-3" placeholder="Tu Nombre" id="nombre">
+                <input type="text" class="form-control fs-3" placeholder="Tu Nombre" id="nombre" required>
+                    <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
+                        Este campo es obligatorio
+                    </div>
+                </div>
 
+                <div class="position-relative">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control fs-3" placeholder="Tu Email" id="email">
+                <input type="email" class="form-control fs-3" placeholder="Tu Email" id="email" required>
+                    <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
+                        ejemplo@correo.com
+                    </div>
+                </div>
 
+                <div class="position-relative">
                 <label for="telefono" class="form-label">Telefono</label>
-                <input type="tel" class="form-control fs-3" placeholder="Tu Telefono" id="telefono">
+                <input type="tel" class="form-control fs-3" placeholder="Tu Telefono" id="telefono" required>
+                    <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
+                        Este campo es obligatorio
+                    </div>
+                </div>
 
                 <label for="mensaje" class="form-label">Mensaje:</label>
                 <textarea class="form-control fs-3" id="mensaje" rows="4"></textarea>
@@ -55,13 +70,20 @@
 
             <fieldset class="border border-black mt-4 p-3 fs-3">
                 <legend class="fs-3">Información sobre la propiedad</legend>
-                <select class="form-select fs-3" aria-label="Default select example">
-                    <label>Vende o Compra:</label>
-                    <option value="1" selected disabled>-- Seleccione --</option>
-                    <option value="2">Compra</option>
-                    <option value="3">Vende</option>
-                </select>
+                <div class="position-relative">
+                    <select class="form-select fs-3" aria-label="Default select example" id="validationDefault01" required>
+                        <label for="validationDefault01">Vende o Compra:</label>
+                        <option value selected disabled>-- Seleccione --</option>
+                        <option>Compra</option>
+                        <option>Vende</option>
 
+                        
+                    </select>
+
+                    <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
+                        Escoge Vende o Compra
+                    </div>
+                </div>
                 <label>Precio o Presupuesto</label>
                 <input type="number" class="form-control fs-3" placeholder="Tu Precio o Presuspuesto" id="presupuesto">
 
