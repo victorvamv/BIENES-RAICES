@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="contenedor contenido-header">
+        <div class="container contenido-header">
             <div class="barra">
                 <a href="index.html">
                     <img src="build/img/logo.svg" alt="Logotipo Bienes Raices">
@@ -28,7 +28,7 @@
 
     <main class="row justify-content-center">
         <h1>Contacto</h1>
-        <picture class="col-6">
+        <picture class="col-11 col-md-8 col-lg-6">
             <source srcset="build/img/destacada3.webp" type="image/webp">
             <source srcset="build/img/destacada3.jpg" type="image/jpeg">
             <img loading="lazy" src="build/img/destacada3.jpg" alt="Imagen Contacto">
@@ -36,7 +36,7 @@
 
         <h2 class="p-3">Llene el formulario de Contacto</h2>
 
-        <form class="col-6 was-validated" novalidate>
+        <form class="col-11 col-md-8 col-lg-6 needs-validation was-validated" novalidate>
             <fieldset class="border border-black p-3 fs-3">
                 <legend class="fs-3">Informacion Personal</legend>
 
@@ -73,7 +73,7 @@
                 <div class="position-relative">
                     <select class="form-select fs-3" aria-label="Default select example" id="validationDefault01" required>
                         <label for="validationDefault01">Vende o Compra:</label>
-                        <option value selected disabled>-- Seleccione --</option>
+                        <option selected disabled value>-- Seleccione --</option>
                         <option>Compra</option>
                         <option>Vende</option>
 
@@ -93,16 +93,16 @@
                 <legend class="fs-3">Información sobre la propiedad</legend>
 
                 <p class="fs-3">Como desea se contactado</p>
-                <div class="d-flex align-items-center px-5">
-                    <div class="form-check px-5">
+                <div class="d-flex justify-content-around">
+                    <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label px-5" for="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
                             Teléfono
                         </label>
                     </div>
-                    <div class="form-check px-5">    
+                    <div class="form-check">    
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                        <label class="form-check-label px-5" for="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
                             E-mail
                         </label>
                     </div>
