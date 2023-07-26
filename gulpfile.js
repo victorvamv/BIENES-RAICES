@@ -30,19 +30,6 @@ function css() {
         .pipe(dest('build/css'));
 }
 
-function bootstrap() {
-    return src(paths.bootstrap)
-        .pipe(sourcemaps.init())
-        .pipe(sass())
-        .pipe(postcss([autoprefixer(), cssnano()]))
-        .pipe(sourcemaps.write('.'))
-        .pipe(dest('build/css'));
-}
-
-function css2(){
-
-}
-
 function javascript() {
     return src(paths.js)
       .pipe(sourcemaps.init())
@@ -70,7 +57,6 @@ function versionWebp() {
 
 function watchArchivos() {
     watch(paths.scss, css);
-    watch(paths.bootstrap, bootstrap);
     watch(paths.js, javascript);
     watch(paths.imagenes, imagenes);
     watch(paths.imagenes, versionWebp);
@@ -78,4 +64,4 @@ function watchArchivos() {
 
 exports.css = css;
 exports.watchArchivos = watchArchivos;
-exports.default = parallel(css, javascript, imagenes, versionWebp, watchArchivos, bootstrap); 
+exports.default = parallel(css, javascript, imagenes, versionWebp, watchArchivos); 
