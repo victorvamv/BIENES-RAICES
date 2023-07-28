@@ -1,20 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 @import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../../../node_modules/bootstrap/scss/functions";
+
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/variables-dark";
 @import url(../../node_modules/bootstrap-icons/font/bootstrap-icons.css);
 
 $theme-colors: (
-  "primary": $primary,
+  "primary": $pink-700,
   "success": $success,
-  "primary2": $orange-500,
+  "primary2": $black,
   "primary3": $blue-700
 );
 .custom-element {
-  color: $gray-100;
-  background-color: $dark;
+  color: $blue-700; 
+  color: $pink-800;
+  color: $gray-800;
+  color: $cyan-900;
+  
 }
+
+.bg-success2 {
+  background-color: $pink-800;
+  background-color: $red-800;
+  background-color: $teal-700;
+  background-color: $cyan-700;
+}
+
 
 
 // @import "bootstrap/scss/maps";
