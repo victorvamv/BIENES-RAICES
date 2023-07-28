@@ -3,12 +3,12 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/variables-dark";
-
+@import url(../../node_modules/bootstrap-icons/font/bootstrap-icons.css);
 
 $theme-colors: (
   "primary": $primary,
   "success": $success,
-  "primary2": $pink-800,
+  "primary2": $orange-500,
   "primary3": $blue-700
 );
 .custom-element {
