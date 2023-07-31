@@ -10,8 +10,24 @@ $theme-colors: (
   "primary": $pink-700,
   "success": $success,
   "primary2": $black,
-  "primary3": $pink-700
+  "primary3": $orange-500,
+  "custom-colors": $pink-700,
+  
+  
 );
+
+// // Create your own map
+// $custom-colors: (
+//   "custom-colors": $pink-700,
+// );
+
+// // Merge the maps
+// $theme-colors: map-merge($theme-colors, $custom-colors);
+
+.boton-personalizado{
+  background-color: $black;
+  color: $black;
+}
 .custom-element {
   color: $blue-700; 
   color: $pink-800;
