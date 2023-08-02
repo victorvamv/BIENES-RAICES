@@ -26,7 +26,8 @@
 } // Modificado por propiedades de bootstrap
 
 .navegacion2 {
-
+    opacity: 1;
+    transition: visibility .3s ease-in-out, opacity 0.5s linear;
 }
 
 .mobile-menu2 {

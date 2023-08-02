@@ -10,18 +10,24 @@ function eventListeners() {
 
 function navegacionResponsive() {
     navegacion = document.querySelector('.visible');
+    navegacion2 = document.querySelector('.navegacion2');
+    
+    navegacion.classList.toggle('invisible'); 
+      
+    
 
-    navegacion.classList.toggle('invisible');
-    
-    
-    
+    navegacion3.style.opacity = 1;
 }
 
 function eliminarPropiedad() {
     navegacion = document.querySelector('.visible');
     const width = window.innerWidth;
+    navegacion.style.opacity = 1;
     if(width >= 768) {
         navegacion.classList.remove('invisible');
-        navegacion.classList.add('visible')
+        
+    }else{
+        navegacion.classList.add('invisible')
     }   
 }
+
