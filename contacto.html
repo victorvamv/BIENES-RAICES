@@ -7,131 +7,141 @@
     <link rel="stylesheet" href="build/css/app.css">  
    
 </head>
-<body>
-    <header class="header">
-        <div class="container contenido-header">
-            <div class="barra">
-                <a href="index.html">
-                    <img src="build/img/logo.svg" alt="Logotipo Bienes Raices">
-                </a>
+<body class="">
+    <div class="z-1 position-absolute top-50 start-50 translate-middle shadow-lg colorModal w-auto h-auto pb-5 rounded-4">
+        <div class="d-flex justify-content-end p-3">
+            <button type="button" class="btn btn-lg btn-primary5 px-4 fs-4 bi bi-x-square "></button>    
+        </div>
+        
+        <p class="text-white text-center p-5">Correcto</p>
+        <p class="text-white text-center p-5">El formulario a sido enviado</p>
+    </div>
+    <div class="opacity-25 z-n1">
+        <header class="header">
+            <div class="container contenido-header">
+                <div class="barra">
+                    <a href="index.html">
+                        <img src="build/img/logo.svg" alt="Logotipo Bienes Raices">
+                    </a>
+                    <nav class="navegacion">
+                        <a href="nosotros.html">Nosotros</a>
+                        <a href="anuncios.html">Anuncios</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contacto.html">Contacto</a>
+                    </nav>
+                </div> 
+            </div>
+        </header>
+
+        <main class="row justify-content-center">
+            <h1 class="p-4">Contacto</h1>
+            <picture class="col-11 col-md-8 col-lg-6">
+                <source srcset="build/img/destacada3.webp" type="image/webp">
+                <source srcset="build/img/destacada3.jpg" type="image/jpeg">
+                <img loading="lazy" src="build/img/destacada3.jpg" alt="Imagen Contacto">
+            </picture>
+
+            <h2 class="p-3">Llene el formulario de Contacto</h2>
+
+            <form class="col-11 col-md-8 col-lg-6 was-validated">
+                <fieldset class="border border-black p-3 fs-3">
+                    <legend class="fs-3">Informacion Personal</legend>
+
+                    <div class="position-relative">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control rounded-pill fs-3" placeholder="Tu Nombre" id="nombre" required>
+                        <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
+                            Este campo es obligatorio
+                        </div>
+                    </div>
+
+                    <div class="position-relative">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control fs-3" placeholder="Tu Email" id="email" required>
+                        <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
+                            ejemplo@correo.com
+                        </div>
+                    </div>
+
+                    <div class="position-relative">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="tel" class="form-control fs-3" placeholder="Tu Telefono" id="telefono" pattern="^[55]\d{10}$" title="Número de 10 digitos que empiece en 55.." required>
+                        <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
+                            Este campo es obligatorio
+                        </div>
+                    </div>
+
+                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    <textarea class="form-control fs-3" id="mensaje" rows="4"></textarea>
+                </fieldset>
+
+                <fieldset class="border border-black mt-4 p-3 fs-3">
+                    <legend class="fs-3">Información sobre la propiedad</legend>
+                    <div class="position-relative">
+                        <select class="form-select fs-3" aria-label="Default select example" id="validationDefault01" required>
+                            <label for="validationDefault01">Vende o Compra:</label>
+                            <option selected disabled value>-- Seleccione --</option>
+                            <option>Compra</option>
+                            <option>Vende</option>
+
+                            
+                        </select>
+
+                        <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
+                            Escoge Vende o Compra
+                        </div>
+                    </div>
+                    <label>Precio o Presupuesto</label>
+                    <input type="number" class="form-control fs-3" placeholder="Tu Precio o Presuspuesto" id="presupuesto">
+
+                </fieldset>
+
+                <fieldset class="border border-black mt-4 p-3 fs-3 mb-3">
+                    <legend class="fs-3">Información sobre la propiedad</legend>
+
+                    <p class="fs-3">Como desea se contactado</p>
+                    <div class="d-flex justify-content-around">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Teléfono
+                            </label>
+                        </div>
+                        <div class="form-check">    
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" required>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                E-mail
+                            </label>
+                        </div>
+                    </div>
+
+                    <p class="fs-3">Si eligió teléfono, elijo la fecha y la hora</p>
+                
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" class="form-control fs-3" required>
+
+                        <label for="hora">Hora:</label>
+                        <input type="time" id="hora" min="09:00" max="18:00" class="form-control fs-3" required>    
+
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary2 btn-lg fs-3 px-5 py-3" id="contactoBoton" >Enviar</button>
+            </form>
+        </main>
+
+        <footer class="footer seccion">
+            <div class="contenedor contenendor-footer">
                 <nav class="navegacion">
                     <a href="nosotros.html">Nosotros</a>
                     <a href="anuncios.html">Anuncios</a>
                     <a href="blog.html">Blog</a>
                     <a href="contacto.html">Contacto</a>
-                </nav>
-            </div> 
-        </div>
-    </header>
-
-    <main class="row justify-content-center">
-        <h1 class="p-4">Contacto</h1>
-        <picture class="col-11 col-md-8 col-lg-6">
-            <source srcset="build/img/destacada3.webp" type="image/webp">
-            <source srcset="build/img/destacada3.jpg" type="image/jpeg">
-            <img loading="lazy" src="build/img/destacada3.jpg" alt="Imagen Contacto">
-        </picture>
-
-        <h2 class="p-3">Llene el formulario de Contacto</h2>
-
-        <form class="col-11 col-md-8 col-lg-6 was-validated">
-            <fieldset class="border border-black p-3 fs-3">
-                <legend class="fs-3">Informacion Personal</legend>
-
-                <div class="position-relative">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control rounded-pill fs-3" placeholder="Tu Nombre" id="nombre" required>
-                    <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
-                        Este campo es obligatorio
-                    </div>
-                </div>
-
-                <div class="position-relative">
-                <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control fs-3" placeholder="Tu Email" id="email" required>
-                    <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
-                        ejemplo@correo.com
-                    </div>
-                </div>
-
-                <div class="position-relative">
-                <label for="telefono" class="form-label">Telefono</label>
-                <input type="tel" class="form-control fs-3" placeholder="Tu Telefono" id="telefono" pattern="^[55]\d{10}$" title="Número de 10 digitos que empiece en 55.." required>
-                    <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
-                        Este campo es obligatorio
-                    </div>
-                </div>
-
-                <label for="mensaje" class="form-label">Mensaje:</label>
-                <textarea class="form-control fs-3" id="mensaje" rows="4"></textarea>
-            </fieldset>
-
-            <fieldset class="border border-black mt-4 p-3 fs-3">
-                <legend class="fs-3">Información sobre la propiedad</legend>
-                <div class="position-relative">
-                    <select class="form-select fs-3" aria-label="Default select example" id="validationDefault01" required>
-                        <label for="validationDefault01">Vende o Compra:</label>
-                        <option selected disabled value>-- Seleccione --</option>
-                        <option>Compra</option>
-                        <option>Vende</option>
-
-                        
-                    </select>
-
-                    <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
-                        Escoge Vende o Compra
-                    </div>
-                </div>
-                <label>Precio o Presupuesto</label>
-                <input type="number" class="form-control fs-3" placeholder="Tu Precio o Presuspuesto" id="presupuesto">
-
-            </fieldset>
-
-            <fieldset class="border border-black mt-4 p-3 fs-3 mb-3">
-                <legend class="fs-3">Información sobre la propiedad</legend>
-
-                <p class="fs-3">Como desea se contactado</p>
-                <div class="d-flex justify-content-around">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Teléfono
-                        </label>
-                    </div>
-                    <div class="form-check">    
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" required>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            E-mail
-                        </label>
-                    </div>
-                </div>
-
-                <p class="fs-3">Si eligió teléfono, elijo la fecha y la hora</p>
-               
-                    <label for="fecha">Fecha:</label>
-                    <input type="date" id="fecha" class="form-control fs-3" required>
-
-                    <label for="hora">Hora:</label>
-                    <input type="time" id="hora" min="09:00" max="18:00" class="form-control fs-3" required>    
-
-            </fieldset>
-
-            <button type="submit" class="btn btn-primary2 btn-lg fs-3 px-5 py-3" id="contactoBoton" >Enviar</button>
-        </form>
-    </main>
-
-    <footer class="footer seccion">
-        <div class="contenedor contenendor-footer">
-            <nav class="navegacion">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
-            </nav> 
-        </div>
-        <p class="text-center text-white">Todos los Derechos Reservados 2023</p>
-    </footer>
-    <script src="build/js/bundle.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+                </nav> 
+            </div>
+            <p class="text-center text-white">Todos los Derechos Reservados 2023</p>
+        </footer>
+        <script src="build/js/bundle.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    </div>
 </body>
 </html>

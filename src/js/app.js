@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function eventListeners2(){
-    const clickBoton = document.querySelector('button#contactoBoton');
+    const clickBoton = document.querySelector("[type='submit']");
     clickBoton.addEventListener('click', agregarAlerta);
 }
 
