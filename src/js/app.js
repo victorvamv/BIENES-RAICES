@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // eventListeners();
+    eventListeners();
     eventListeners2();
 });
 
@@ -7,6 +7,11 @@ function eventListeners2(){
     const clickBoton = document.querySelector('button#contactoBoton');
     clickBoton.addEventListener('click', agregarAlerta);
 }
+
+function agregarAlerta(){
+    alert("haz dado click")
+}
+
 
 function eventListeners() {
     const mobileMenu = document.querySelector('.d-md-none');
@@ -34,7 +39,4 @@ function eliminarPropiedad() {
     } 
 }
 
-function agregarAlerta(){
-    alert("haz dado click")
-}
 
