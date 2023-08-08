@@ -10,20 +10,15 @@ function eventListeners2(){
         event.preventDefault();
     });
     const clickBoton = document.querySelector('#clickBoton')
-    if (clickBoton) {
-        const miModal = document.querySelector('#miModal');
-        miModal.addEventListener('close', function() {
-            miFormulario.submit();
-        });    
-    } 
-    
+    clickBoton.addEventListener('click', function(event){
+        if (event && miFormulario.checkValidity()) {
+            const miModal = document.querySelector('#miModal');
+            miModal.addEventListener('close', function() {
+                miFormulario.submit();
+            });    
+        }
+    })   
 }
-
-// function agregarAlerta(){
-//     alert("haz dado click")
-// }
-
-
 function eventListeners() {
     const mobileMenu = document.querySelector('.d-md-none');
 

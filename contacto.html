@@ -9,14 +9,22 @@
 </head>
 <body class"">
     <dialog id="miModal" class="shadow-lg colorModal rounded-4">
-        <div class="">
-            <div class="d-flex justify-content-end p-3">
-                <button type="button" class="btn btn-lg btn-success px-4 fs-4 bi bi-x-square" onclick="document.getElementById('miModal').close()"></button>    
-            </div>
+        
             
             <p class="text-white text-center p-5">Correcto</p>
-            <p class="text-white text-center p-5">El formulario a sido enviado</p>
-        </div>
+            <p class="text-white text-center p-5">¿Seguro que quiere enviar el formulario?</p>
+           <div class="d-flex justify-content-evenly">
+                <button type="button" class="btn btn-lg btn-danger px-4 fs-4 bi bi-x-square" onclick="document.getElementById('miModal').close()" id="clickBoton2"></button>    
+            
+
+            
+                <button type="button" class="btn btn-lg btn-success px-4 fs-4 bi bi-x-square" onclick="document.getElementById('miModal').close()" id="clickBoton"></button>
+           
+           </div>
+
+            
+            
+        
     </dialog>
     <div class="">
         <header class="header">
