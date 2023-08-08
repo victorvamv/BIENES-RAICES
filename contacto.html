@@ -8,15 +8,17 @@
    
 </head>
 <body class"">
-    <div class="invisible z-1 position-absolute top-50 start-50 translate-middle shadow-lg colorModal w-auto h-auto pb-5 rounded-4">
-        <div class="d-flex justify-content-end p-3">
-            <button type="button" class="btn btn-lg btn-primary5 px-4 fs-4 bi bi-x-square "></button>    
+    <dialog id="miModal" class="shadow-lg colorModal rounded-4">
+        <div class="">
+            <div class="d-flex justify-content-end p-3">
+                <button type="button" class="btn btn-lg btn-success px-4 fs-4 bi bi-x-square" onclick="document.getElementById('miModal').close()"></button>    
+            </div>
+            
+            <p class="text-white text-center p-5">Correcto</p>
+            <p class="text-white text-center p-5">El formulario a sido enviado</p>
         </div>
-        
-        <p class="text-white text-center p-5">Correcto</p>
-        <p class="text-white text-center p-5">El formulario a sido enviado</p>
-    </div>
-    <div class="z-n1">
+    </dialog>
+    <div class="">
         <header class="header">
             <div class="container contenido-header">
                 <div class="barra">
@@ -43,7 +45,7 @@
 
             <h2 class="p-3">Llene el formulario de Contacto</h2>
 
-            <form class="col-11 col-md-8 col-lg-6 was-validated">
+            <form class="col-11 col-md-8 col-lg-6 was-validated" id="miFormulario">
                 <fieldset class="border border-black p-3 fs-3">
                     <legend class="fs-3">Informacion Personal</legend>
 
@@ -65,7 +67,7 @@
 
                     <div class="position-relative">
                     <label for="telefono" class="form-label">Telefono</label>
-                    <input type="tel" class="form-control fs-3" placeholder="Tu Telefono" id="telefono" pattern="^[55]\d{10}$" title="Número de 10 digitos que empiece en 55.." required>
+                    <input type="tel" class="form-control fs-3" placeholder="Tu Telefono" id="telefono" pattern="^[55]\d{9}$" title="Número de 10 digitos que empiece en 55.." required>
                         <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
                             Este campo es obligatorio
                         </div>
@@ -125,7 +127,7 @@
 
                 </fieldset>
 
-                <button type="submit" class="btn btn-primary2 btn-lg fs-3 px-5 py-3" id="contactoBoton" >Enviar</button>
+                <button type="submit" class="btn btn-primary2 btn-lg fs-3 px-5 py-3" id="contactoBoton" onclick="document.getElementById('miModal').showModal()" >Enviar</button>
             </form>
         </main>
 

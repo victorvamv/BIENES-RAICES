@@ -4,30 +4,43 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function eventListeners2(){
-    const clickBoton = document.querySelector("[type='submit']");
-    clickBoton.addEventListener('click', agregarAlerta);
+    const miFormulario = document.querySelector("#miFormulario");
+
+    miFormulario.addEventListener('submit', function(event){
+        event.preventDefault();
+    });
+    const clickBoton = document.querySelector('#clickBoton')
+    if (clickBoton) {
+        const miModal = document.querySelector('#miModal');
+        miModal.addEventListener('close', function() {
+            miFormulario.submit();
+        });    
+    } 
+    
 }
 
-function agregarAlerta(){
-    alert("haz dado click")
-}
+// function agregarAlerta(){
+//     alert("haz dado click")
+// }
 
 
 function eventListeners() {
     const mobileMenu = document.querySelector('.d-md-none');
-    
-    
-    mobileMenu.addEventListener('click', navegacionResponsive);
-    window.addEventListener('resize', eliminarPropiedad);
-}
 
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', navegacionResponsive);
+        window.addEventListener('resize', eliminarPropiedad);    
+    }    
+}
+var width2 = window.innerWidth;
+console.log(width2);
 function navegacionResponsive() {
     navegacion = document.querySelector('.visible');
     
-    navegacion.classList.toggle('invisible'); 
-    navegacion.classList.toggle('navegacion2');
-
+        navegacion.classList.toggle('invisible'); 
+        navegacion.classList.toggle('navegacion2');    
 }
+
 
 function eliminarPropiedad() {
     navegacion = document.querySelector('.visible');
@@ -35,8 +48,9 @@ function eliminarPropiedad() {
     
     if(width >= 768) {
         navegacion.classList.remove('invisible');
-        navegacion.classList.remove('navegacion2');
+        navegacion.classList.remove('navegacion2');  
     } 
 }
+
 
 
