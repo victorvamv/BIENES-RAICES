@@ -5,6 +5,10 @@
     background-image: url(../img/header.webp);
 }
 
+.dark-mode {
+    filter: invert(100%);
+}
+
 .header {
     background-color: $blue-900;
     padding: 3rem 0 3rem 0;

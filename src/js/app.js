@@ -1,45 +1,58 @@
 document.addEventListener('DOMContentLoaded', function () {
     navegacion();
     modalesFormulario();
+    darkmode();
 });
+
+function darkmode() {
+    const darkMode = document.querySelector('img[type="button"]');
+
+    darkMode.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode-boton');
+    });
+}
 
 function modalesFormulario(){
     const miFormulario = document.querySelector("#miFormulario");
-
-
     // onclick="document.getElementById('miModal2').showModal()"
     const contactoBoton = document.querySelector('#contactoBoton');
     const miModalX = document.getElementById("miModal");
     const miModalY = document.getElementById("miModal2");
-    contactoBoton.addEventListener('click', function() {
+    if (contactoBoton) {
+       contactoBoton.addEventListener('click', function() {
         if (miFormulario.checkValidity()) {
             miModalX.showModal();
         }else{
             miModalY.showModal();
         }
-        
-
-     })    
-    miFormulario.addEventListener('submit', function(event){
+    }) 
+    }
+    if (miFormulario) {
+        miFormulario.addEventListener('submit', function(event){
         event.preventDefault();
-    });
-
+        });
+    }
     
-        
-   
     // const contactoBoton = document.getElementById('#contactoBoton');
     // contactoBoton.removeAttribute
-
     const clickBoton = document.querySelector('#clickBoton')
-    clickBoton.addEventListener('click', function(event){
-        if (event && miFormulario.checkValidity()) {
-            const miModal = document.querySelector('#miModal');
-            miModal.addEventListener('close', function() {
-                miFormulario.submit();
-            });    
-        }
-    })   
+    const miModalC = document.querySelector('#miModal3');
+    if (clickBoton) {
+        clickBoton.addEventListener('click', function(event){
+            if (event && miFormulario.checkValidity()) {
+                const miModal = document.querySelector('#miModal');
+                miModal.addEventListener('close', function() {
+                    miModalC.showModal();
+                    miModalC.addEventListener('close', function() {
+                        miFormulario.submit();
+                        window.location.href = "index.html";
+                    }) //#miModal3   
+                });//#miModal    
+            }
+        })   
+    }   
 }
+
 function navegacion() {
     const mobileMenu = document.querySelector('.d-md-none');
     if (mobileMenu) {
@@ -53,11 +66,9 @@ console.log(width2);
 
 function navegacionResponsive() {
     navegacion = document.querySelector('.visible');
-    
         navegacion.classList.toggle('invisible'); 
         navegacion.classList.toggle('navegacion2');    
 }
-
 
 function eliminarPropiedad() {
     navegacion = document.querySelector('.visible');
