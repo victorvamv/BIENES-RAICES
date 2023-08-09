@@ -1,14 +1,35 @@
 document.addEventListener('DOMContentLoaded', function () {
-    eventListeners();
-    eventListeners2();
+    navegacion();
+    modalesFormulario();
 });
 
-function eventListeners2(){
+function modalesFormulario(){
     const miFormulario = document.querySelector("#miFormulario");
 
+
+    // onclick="document.getElementById('miModal2').showModal()"
+    const contactoBoton = document.querySelector('#contactoBoton');
+    const miModalX = document.getElementById("miModal");
+    const miModalY = document.getElementById("miModal2");
+    contactoBoton.addEventListener('click', function() {
+        if (miFormulario.checkValidity()) {
+            miModalX.showModal();
+        }else{
+            miModalY.showModal();
+        }
+        
+
+     })    
     miFormulario.addEventListener('submit', function(event){
         event.preventDefault();
     });
+
+    
+        
+   
+    // const contactoBoton = document.getElementById('#contactoBoton');
+    // contactoBoton.removeAttribute
+
     const clickBoton = document.querySelector('#clickBoton')
     clickBoton.addEventListener('click', function(event){
         if (event && miFormulario.checkValidity()) {
@@ -19,16 +40,17 @@ function eventListeners2(){
         }
     })   
 }
-function eventListeners() {
+function navegacion() {
     const mobileMenu = document.querySelector('.d-md-none');
-
     if (mobileMenu) {
         mobileMenu.addEventListener('click', navegacionResponsive);
         window.addEventListener('resize', eliminarPropiedad);    
     }    
 }
+
 var width2 = window.innerWidth;
 console.log(width2);
+
 function navegacionResponsive() {
     navegacion = document.querySelector('.visible');
     

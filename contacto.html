@@ -8,24 +8,23 @@
    
 </head>
 <body class"">
-    <dialog id="miModal" class="shadow-lg colorModal rounded-4">
-        
-            
+
+    <dialog id="miModal" class="shadow-lg colorModal rounded-4">      
             <p class="text-white text-center p-5">Correcto</p>
             <p class="text-white text-center p-5">¿Seguro que quiere enviar el formulario?</p>
            <div class="d-flex justify-content-evenly">
-                <button type="button" class="btn btn-lg btn-danger px-4 fs-4 bi bi-x-square" onclick="document.getElementById('miModal').close()" id="clickBoton2"></button>    
-            
-
-            
-                <button type="button" class="btn btn-lg btn-success px-4 fs-4 bi bi-x-square" onclick="document.getElementById('miModal').close()" id="clickBoton"></button>
-           
-           </div>
-
-            
-            
-        
+                <button type="button" class="btn btn-lg btn-danger px-4 fs-4 bi bi-x-square" onclick="document.getElementById('miModal').close()" id="clickBoton2">No</button>    
+                <button type="button" class="btn btn-lg btn-success px-4 fs-4 bi bi-x-square" onclick="document.getElementById('miModal').close()" id="clickBoton">Si</button>
+           </div>  
     </dialog>
+
+    <dialog id="miModal2" class="shadow-lg colorModal rounded-4">
+        <p>¡Faltan campos por llenar!</p>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-lg btn-success px-4 fs-4 bi bi-x-square" onclick="document.getElementById('miModal2').close()" id="clickBoton2">De acuerdo</button>
+        </div>
+    </dialog>
+
     <div class="">
         <header class="header">
             <div class="container contenido-header">
@@ -61,7 +60,7 @@
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" class="form-control rounded-pill fs-3" placeholder="Tu Nombre" id="nombre" required>
                         <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
-                            Este campo es obligatorio
+                            Ingresa tu nombre
                         </div>
                     </div>
 
@@ -77,11 +76,11 @@
                     <label for="telefono" class="form-label">Telefono</label>
                     <input type="tel" class="form-control fs-3" placeholder="Tu Telefono" id="telefono" pattern="^[55]\d{9}$" title="Número de 10 digitos que empiece en 55.." required>
                         <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
-                            Este campo es obligatorio
+                            Agrega tu número telefonico
                         </div>
                     </div>
 
-                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    <label for="mensaje" class="form-label">Mensaje (opcional):</label>
                     <textarea class="form-control fs-3" id="mensaje" rows="4"></textarea>
                 </fieldset>
 
@@ -92,18 +91,14 @@
                             <label for="validationDefault01">Vende o Compra:</label>
                             <option selected disabled value>-- Seleccione --</option>
                             <option>Compra</option>
-                            <option>Vende</option>
-
-                            
+                            <option>Vende</option>   
                         </select>
-
                         <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
                             Escoge Vende o Compra
                         </div>
                     </div>
                     <label>Precio o Presupuesto</label>
                     <input type="number" class="form-control fs-3" placeholder="Tu Precio o Presuspuesto" id="presupuesto">
-
                 </fieldset>
 
                 <fieldset class="border border-black mt-4 p-3 fs-3 mb-3">
@@ -126,16 +121,25 @@
                     </div>
 
                     <p class="fs-3">Si eligió teléfono, elijo la fecha y la hora</p>
-                
-                        <label for="fecha">Fecha:</label>
-                        <input type="date" id="fecha" class="form-control fs-3" required>
-
-                        <label for="hora">Hora:</label>
-                        <input type="time" id="hora" min="09:00" max="18:00" class="form-control fs-3" required>    
+                        <div class="position-relative">
+                            <label for="fecha">Fecha:</label>
+                            <input type="date" id="fecha" class="form-control fs-3" required> 
+                            <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
+                                Este campo es obligatorio
+                            </div>   
+                        </div>
+                        
+                        <div class="position-relative">
+                            <label for="hora">Hora:</label>
+                            <input type="time" id="hora" min="09:00" max="18:00" class="form-control fs-3" required>
+                            <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
+                                Este campo es obligatorio
+                            </div>
+                        </div>        
 
                 </fieldset>
 
-                <button type="submit" class="btn btn-primary2 btn-lg fs-3 px-5 py-3" id="contactoBoton" onclick="document.getElementById('miModal').showModal()" >Enviar</button>
+                <button type="submit" class="btn btn-primary2 btn-lg fs-3 px-5 py-3" id="contactoBoton">Enviar</button>
             </form>
         </main>
 
