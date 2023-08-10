@@ -9,16 +9,24 @@
 <body>
     <header class="header">
         <div class="contenedor contenido-header">
-            <div class="barra">
+            <div class="d-flex flex-column align-items-center flex-md-row-reverse justify-content-md-between pt-5">
                 <a href="index.html">
                     <img src="build/img/logo.svg" alt="Logotipo Bienes Raices">
                 </a>
-                <nav class="navegacion">
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="anuncios.html">Anuncios</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contacto.html">Contacto</a>
-                </nav>
+            
+                <div class="d-md-none pt-4" style="width: 5rem;">
+                    <img src="build/img/barras.svg" alt="Barras responsive">
+                </div>
+
+                <div class="d-flex flex-column align-items-center align-items-md-end">
+                    <img type="button" class="dark-mode col-1 my-3 mt-md-0 " src="build/img/dark-mode.svg">  
+                    <nav class="navegacion1 d-md-flex gap-4 tp-3 visible">
+                        <a class="d-block text-white fs-3 text-center" href="nosotros.html">Nosotros</a>
+                        <a class="d-block text-white fs-3 text-center" href="anuncios.html">Anuncios</a>
+                        <a class="d-block text-white fs-3 text-center" href="blog.html">Blog</a>
+                        <a class="d-block text-white fs-3 text-center" href="contacto.html">Contacto</a>
+                    </nav> <!--Anteriormente estaba la clase navegacion-->
+                </div> 
             </div> 
         </div>
     </header>
@@ -29,7 +37,7 @@
             <div class="col mt-5">
                 <div class="card text-bg-light border border-3">
                     <img src="build/img/anuncio1.jpg" class="card-img-top" alt="Imagen 1">
-                    <div class="card-body">
+                    <div class="card-body anuncio">
                         <div class="p-5">
                             <div class="h3 text-center">Casa de Lujo en el Lago</div>
                             <p>Casa en el lago con excelente vista, acabados de lujo a un buen precio</p>
@@ -37,20 +45,20 @@
 
                             <ul class="iconos-caracteristicas d-flex">
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
+                                    <img class="icono" loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
                                     <p>3</p>
                                 </li>
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
+                                    <img class="icono" loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
                                     <p>3</p>
                                 </li>
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
+                                    <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
                                     <p>4</p>
                                 </li>
                             </ul>
                             <div class="pt-5">
-                                <a class="d-grid btn btn-primary3 btn-lg py-3 fw-semibold fs-3" href="anuncio.html" role="button">Ver Propiedad</a>  
+                                <a class="d-grid btn btn-custom-colors btn-lg py-3 fw-semibold fs-3" href="anuncio.html" role="button">Ver Propiedad</a>  
                             </div>
                         </div> <!--.p-5-->
                     </div> <!--.card-body-->
@@ -60,7 +68,7 @@
             <div class="col mt-5">
                 <div class="card text-bg-light border border-3">
                     <img src="build/img/anuncio2.jpg" class="card-img-top" alt="Imagen 2">
-                    <div class="card-body">
+                    <div class="card-body anuncio">
                         <div class="p-5">
                             <div class="h3 text-center">Casa Terminados de Lujo</div>
                             <p>Casa con diseño moderno, así como tecnología inteligente y amueblada</p>
@@ -68,21 +76,21 @@
 
                             <ul class="iconos-caracteristicas d-flex">
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
+                                    <img class="icono" loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
                                     <p>3</p>
                                 </li>
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
+                                    <img class="icono" loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
                                     <p>3</p>
                                 </li>
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
+                                    <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
                                     <p>4</p>
                                 </li>
                             </ul>
                     
                             <div class="pt-5">
-                                <a class="d-grid btn btn-primary3 btn-lg py-3 fw-semibold fs-3" href="anuncio.html" role="button">Ver Propiedad</a>  
+                                <a class="d-grid btn btn-custom-colors btn-lg py-3 fw-semibold fs-3" href="anuncio.html" role="button">Ver Propiedad</a>  
                             </div>
                         </div> <!--.p-5-->
                     </div> <!--.card-body-->
@@ -92,7 +100,7 @@
             <div class="col mt-5">
                 <div class="card text-bg-light border border-3">
                     <img src="build/img/anuncio3.jpg" class="card-img-top" alt="Imagen 3">
-                    <div class="card-body">
+                    <div class="card-body anuncio">
                         <div class="p-5">
                             <div class="h3 text-center">Casa con Alberca</div>
                             <p>Casa con alberca y acabados de lujo en la ciudad, excelente oportunidad</p>
@@ -100,20 +108,20 @@
 
                             <ul class="iconos-caracteristicas d-flex">
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
+                                    <img class="icono" loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
                                     <p>3</p>
                                 </li>
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
+                                    <img class="icono" loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
                                     <p>3</p>
                                 </li>
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
+                                    <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
                                     <p>4</p>
                                 </li>
                             </ul>
                             <div class="pt-5">
-                                <a class="d-grid btn btn-primary3 btn-lg py-3 fw-semibold fs-3" href="anuncio.html" role="button">Ver Propiedad</a>  
+                                <a class="d-grid btn btn-custom-colors btn-lg py-3 fw-semibold fs-3" href="anuncio.html" role="button">Ver Propiedad</a>  
                             </div>
                         </div> <!--.p-5-->
                     </div> <!--.card-body-->
@@ -123,7 +131,7 @@
             <div class="col mt-5">
                 <div class="card text-bg-light border border-3">
                     <img src="build/img/anuncio4.jpg" class="card-img-top" alt="Imagen 3">
-                    <div class="card-body">
+                    <div class="card-body anuncio">
                         <div class="p-5">
                             <div class="h3 text-center">Casa con Alberca</div>
                             <p>Casa con alberca y acabados de lujo en la ciudad, excelente oportunidad</p>
@@ -131,20 +139,20 @@
 
                             <ul class="iconos-caracteristicas d-flex">
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
+                                    <img class="icono" loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
                                     <p>3</p>
                                 </li>
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
+                                    <img class="icono" loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
                                     <p>3</p>
                                 </li>
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
+                                    <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
                                     <p>4</p>
                                 </li>
                             </ul>
                             <div class="pt-5">
-                                <a class="d-grid btn btn-primary3 btn-lg py-3 fw-semibold fs-3" href="anuncio.html" role="button">Ver Propiedad</a>  
+                                <a class="d-grid btn btn-custom-colors btn-lg py-3 fw-semibold fs-3" href="anuncio.html" role="button">Ver Propiedad</a>  
                             </div>
                         </div> <!--.p-5-->
                     </div> <!--.card-body-->
@@ -154,7 +162,7 @@
             <div class="col mt-5">
                 <div class="card text-bg-light border border-3">
                     <img src="build/img/anuncio5.jpg" class="card-img-top" alt="Imagen 3">
-                    <div class="card-body">
+                    <div class="card-body anuncio">
                         <div class="p-5">
                             <div class="h3 text-center">Casa con Alberca</div>
                             <p>Casa con alberca y acabados de lujo en la ciudad, excelente oportunidad</p>
@@ -162,20 +170,20 @@
 
                             <ul class="iconos-caracteristicas d-flex">
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
+                                    <img class="icono" loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
                                     <p>3</p>
                                 </li>
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
+                                    <img class="icono" loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
                                     <p>3</p>
                                 </li>
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
+                                    <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
                                     <p>4</p>
                                 </li>
                             </ul>
                             <div class="pt-5">
-                                <a class="d-grid btn btn-primary3 btn-lg py-3 fw-semibold fs-3" href="anuncio.html" role="button">Ver Propiedad</a>  
+                                <a class="d-grid btn btn-custom-colors btn-lg py-3 fw-semibold fs-3" href="anuncio.html" role="button">Ver Propiedad</a>  
                             </div>
                         </div> <!--.p-5-->
                     </div> <!--.card-body-->
@@ -185,7 +193,7 @@
             <div class="col mt-5">
                 <div class="card text-bg-light border border-3">
                     <img src="build/img/anuncio6.jpg" class="card-img-top" alt="Imagen 3">
-                    <div class="card-body">
+                    <div class="card-body anuncio">
                         <div class="p-5">
                             <div class="h3 text-center">Casa con Alberca</div>
                             <p>Casa con alberca y acabados de lujo en la ciudad, excelente oportunidad</p>
@@ -193,15 +201,15 @@
 
                             <ul class="iconos-caracteristicas d-flex">
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
+                                    <img class="icono" loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
                                     <p>3</p>
                                 </li>
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
+                                    <img class="icono" loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
                                     <p>3</p>
                                 </li>
                                 <li class="d-flex justify-content-center">
-                                    <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
+                                    <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
                                     <p>4</p>
                                 </li>
                             </ul>

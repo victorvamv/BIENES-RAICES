@@ -9,16 +9,24 @@
 <body class="position-relative">
     <header class="header">
         <div class="contenedor contenido-header">
-            <div class="barra">
+            <div class="d-flex flex-column align-items-center flex-md-row-reverse justify-content-md-between pt-5">
                 <a href="index.html">
                     <img src="build/img/logo.svg" alt="Logotipo Bienes Raices">
                 </a>
-                <nav class="navegacion">
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="anuncios.html">Anuncios</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contacto.html">Contacto</a>
-                </nav>
+            
+                <div class="d-md-none pt-4" style="width: 5rem;">
+                    <img src="build/img/barras.svg" alt="Barras responsive">
+                </div>
+
+                <div class="d-flex flex-column align-items-center align-items-md-end">
+                    <img type="button" class="dark-mode col-1 my-3 mt-md-0 " src="build/img/dark-mode.svg">  
+                    <nav class="navegacion1 d-md-flex gap-4 tp-3 visible">
+                        <a class="d-block text-white fs-3 text-center" href="nosotros.html">Nosotros</a>
+                        <a class="d-block text-white fs-3 text-center" href="anuncios.html">Anuncios</a>
+                        <a class="d-block text-white fs-3 text-center" href="blog.html">Blog</a>
+                        <a class="d-block text-white fs-3 text-center" href="contacto.html">Contacto</a>
+                    </nav> <!--Anteriormente estaba la clase navegacion-->
+                </div> 
             </div> 
         </div>
     </header>
@@ -41,15 +49,15 @@
                    
                        <ul class="iconos-caracteristicas d-flex">
                             <li class="d-flex justify-content-center">
-                                <img loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
+                                <img class="icono2" loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
                                 <p>3</p>
                             </li>
                             <li class="d-flex justify-content-center">
-                                <img loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
+                                <img class="icono2" loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
                                 <p>3</p>
                             </li>
                             <li class="d-flex justify-content-center">
-                                <img loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
+                                <img class="icono2" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
                                 <p>4</p>
                             </li>
                         </ul> 

@@ -3,7 +3,7 @@
     flex-direction: column;
     padding-top: 2rem;
     @include tablet {
-        flex-direction: row-reverse; 
+         
         justify-content: space-between;
     }
 } // Modificado por propiedades de bootstrap
@@ -26,6 +26,14 @@
 } // Modificado por propiedades de bootstrap
 .navegacion2 {
     opacity: 0;
-    transition: visibility .3s ease-in-out, opacity 0.5s linear;
+    height: 0;
+    transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
 }
+
+.visibility {
+    opacity: 1;
+    height: auto;
+}
+
+
 

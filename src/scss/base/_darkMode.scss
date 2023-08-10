@@ -5,7 +5,7 @@
         color: $blanco;
     }
 
-    a, h1, h2, h3, h4, .h3, a.h2{
+    a, h1, h2, h3, h4, .h3, div.h2, blockquote, label, legend, .h1{
         color: $gris;
     }
 
@@ -19,6 +19,21 @@
         .icono {
             filter: invert(100%);
         }
+    }
+
+    label, legend, p, input, ::placeholder {
+        color: $gris;
+    }
+
+    input:not([type="submit"]),
+    textarea,
+    select {
+        background-color: $grisOscuro;
+        color: $gris;
+    }
+
+    .icono2 {
+        filter: invert(100%);
     }
 
     
