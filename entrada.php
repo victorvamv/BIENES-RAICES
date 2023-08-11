@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienes Raices</title>
-    <link rel="stylesheet" href="build/css/app.css"> 
-</head>
-<body>
-    <header class="header">
-        <div class="contenedor contenido-header">
-            <div class="barra">
-                <a href="index.html">
-                    <img src="build/img/logo.svg" alt="Logotipo Bienes Raices">
-                </a>
-                <nav class="navegacion">
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="anuncios.html">Anuncios</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contacto.html">Contacto</a>
-                </nav>
-            </div> 
-        </div>
-    </header>
+<?php
+    require 'includes/funciones.php';
+    incluirTemplate('header');
+?>
 
     <main class="container" style="text-align: justify;">
         <div class="row justify-content-center">
@@ -49,17 +29,6 @@
         </div>
     </main>
 
-    <footer class="footer seccion">
-        <div class="contenedor contenendor-footer">
-            <nav class="navegacion">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
-            </nav> 
-        </div>
-        <p class="text-center text-white">Todos los Derechos Reservados 2023</p>
-    </footer>
-    <script src="build/js/bundle.min.js"></script>
-</body>
-</html>
+    <?php
+        incluirTemplate('footer');
+    ?>

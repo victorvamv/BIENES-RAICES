@@ -1,36 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienes Raices</title>
-    <link rel="stylesheet" href="build/css/app.css">  
-    
-<body>
-    <header class="header inicio">
-        <div class="container contenido-header">
-            <div class="d-flex flex-column align-items-center flex-md-row-reverse justify-content-md-between pt-5">
-                <a href="index.html">
-                    <img src="build/img/logo.svg" alt="Logotipo Bienes Raices">
-                </a>
-            
-                <div class="d-md-none pt-4" style="width: 5rem;">
-                    <img src="build/img/barras.svg" alt="Barras responsive">
-                </div>
-
-                <div class="d-flex flex-column align-items-center align-items-md-end">
-                    <img type="button" class="dark-mode col-1 my-3 mt-md-0 " src="build/img/dark-mode.svg">  
-                    <nav class="navegacion1 d-md-flex gap-4 tp-3 visible">
-                        <a class="d-block text-white fs-3 text-center" href="nosotros.html">Nosotros</a>
-                        <a class="d-block text-white fs-3 text-center" href="anuncios.html">Anuncios</a>
-                        <a class="d-block text-white fs-3 text-center" href="blog.html">Blog</a>
-                        <a class="d-block text-white fs-3 text-center" href="contacto.html">Contacto</a>
-                    </nav> <!--Anteriormente estaba la clase navegacion-->
-                </div>     
-            </div> <!--.flex (anteirormente estaba la clase barra)--> 
-            <h1>Venta de Casas y Departamentos Exclusivos de Lujo</h1>
-        </div>
-    </header>
+<?php
+    require 'includes/funciones.php';
+    incluirTemplate('header', $inicio=true);
+?>
 
     <main class="container">
         <h1 class="mt-5">Más Sobre Nosotros</h1>
@@ -240,18 +211,7 @@
         </div>
     </div>   
 
-    <footer class="footer seccion">
-        <div class="container contenendor-footer">
-            <nav class="navegacion">
-                <a href="nosotros.html">Nosotros</a>
-                <a href="anuncios.html">Anuncios</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
-            </nav> 
-        </div>
-        <p class="text-center text-white">Todos los Derechos Reservados 2023</p>
-    </footer>
-    <script src="build/js/bundle.min.js"></script>
+    <?php
+        incluirTemplate('footer');
+    ?>
     
-</body>
-</html>
