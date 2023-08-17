@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navegacion();
     modalesFormulario();
     darkmode();
+    modalCrear();
 });
 
 function darkmode() {
@@ -29,7 +30,7 @@ function modalesFormulario(){
     }
     if (miFormulario) {
         miFormulario.addEventListener('submit', function(event){
-        event.preventDefault();
+            event.preventDefault();
         });
     }
     
@@ -51,6 +52,31 @@ function modalesFormulario(){
             }
         })   
     }   
+}
+
+function modalCrear() {
+    const modalCrear = document.querySelector("#modalCrear");
+    const crearBoton = document.querySelector("#crearBoton");
+    const miFormulario2 = document.querySelector("#miFormulario2");
+    const modalAviso = document.querySelector("#modalAviso");
+
+    crearBoton.addEventListener('click', function() {
+        if (miFormulario2.checkValidity()) {
+            modalCrear.showModal();    
+        }else{
+            modalAviso.showModal(); 
+            modalAviso.addEventListener('close', function() {
+                miFormulario2.submit();   
+            })   
+        }        
+    })
+
+    miFormulario2.addEventListener('submit', function(event) {
+        event.preventDefault();
+    });
+    modalCrear.addEventListener('close', function() {
+        miFormulario2.submit();
+    })
 }
 
 function navegacion() {
