@@ -48,7 +48,7 @@
 
                     <div class="position-relative">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control rounded-pill fs-3" placeholder="Tu Nombre" id="nombre" value="Victor Hugo Vazquez" required>
+                    <input type="text" class="form-control rounded-pill fs-3" placeholder="Tu Nombre" id="nombre" value="Victor Hugo Vazquez" name="nombre" required>
                         <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
                             Ingresa tu nombre
                         </div>
@@ -56,7 +56,7 @@
 
                     <div class="position-relative">
                     <label for="email" class="form-label">E-mail</label>
-                    <input type="email" class="form-control fs-3" placeholder="Tu Email" id="email" value="victorvamv17@gmail.com" required>
+                    <input type="email" class="form-control fs-3" placeholder="Tu Email" id="email" value="victorvamv17@gmail.com" name="email" required>
                         <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
                             ejemplo@correo.com
                         </div>
@@ -64,20 +64,20 @@
 
                     <div class="position-relative">
                     <label for="telefono" class="form-label">Telefono</label>
-                    <input type="tel" class="form-control fs-3" placeholder="Tu Telefono" id="telefono" pattern="^[55]\d{9}$" title="Número de 10 digitos que empiece en 55.." value="5553598797" required>
+                    <input type="tel" class="form-control fs-3" placeholder="Tu Telefono" id="telefono" pattern="^[55]\d{9}$" title="Número de 10 digitos que empiece en 55.." name="telefono" value="5553598797" required>
                         <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
                             Agrega tu número telefonico
                         </div>
                     </div>
 
                     <label for="mensaje" class="form-label">Mensaje (opcional):</label>
-                    <textarea class="form-control fs-3" id="mensaje" rows="4"></textarea>
+                    <textarea class="form-control fs-3" id="mensaje" rows="4" name="mensaje"></textarea>
                 </fieldset>
 
                 <fieldset class="border mt-4 p-3 fs-3">
                     <legend class="fs-3">Información sobre la propiedad</legend>
                     <div class="position-relative">
-                        <select class="form-select fs-3" aria-label="Default select example" id="validationDefault01" required>
+                        <select class="form-select fs-3" aria-label="Default select example" id="validationDefault01" name="validationDefault01" required>
                             <label for="validationDefault01">Vende o Compra:</label>
                             <option selected disabled value>-- Seleccione --</option>
                             <option>Compra</option>
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <label>Precio o Presupuesto</label>
-                    <input type="number" class="form-control fs-3" placeholder="Tu Precio o Presuspuesto" id="presupuesto">
+                    <input type="number" class="form-control fs-3" placeholder="Tu Precio o Presuspuesto" id="presupuesto" name="presupuesto">
                 </fieldset>
 
                 <fieldset class="border mt-4 p-3 fs-3 mb-3">
@@ -97,13 +97,13 @@
                     <p class="fs-3">Como desea se contactado</p>
                     <div class="d-flex justify-content-around">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault1" required>
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Teléfono
                             </label>
                         </div>
                         <div class="form-check">    
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" required>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2" required>
                             <label class="form-check-label" for="flexRadioDefault2">
                                 E-mail
                             </label>
@@ -113,7 +113,7 @@
                     <p class="fs-3">Si eligió teléfono, elijo la fecha y la hora</p>
                         <div class="position-relative">
                             <label for="fecha">Fecha:</label>
-                            <input type="date" id="fecha" class="form-control fs-3" required> 
+                            <input type="date" id="fecha" class="form-control fs-3" name="fecha" required> 
                             <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
                                 Este campo es obligatorio
                             </div>   
@@ -121,7 +121,7 @@
                         
                         <div class="position-relative">
                             <label for="hora">Hora:</label>
-                            <input type="time" id="hora" min="09:00" max="18:00" class="form-control fs-3" required>
+                            <input type="time" id="hora" min="09:00" max="18:00" class="form-control fs-3" name="hora" required>
                             <div class="invalid-tooltip fs-4 position-absolute top-0 end-0 px-5">
                                 Este campo es obligatorio
                             </div>

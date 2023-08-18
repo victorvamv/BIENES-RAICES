@@ -75,11 +75,13 @@
     require '../../includes/funciones.php';
     incluirTemplate('header');
 ?>
-    <dialog id="modalAviso" class="shadow-lg colorModal rounded-4">
-        <p class="text-white p-5">¡Faltan campos por llenar!</p>
-        <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-lg btn-success px-4 fs-4 bi bi-x-square" onclick="document.getElementById('modalAviso').close()" id="clickBoton6">De acuerdo</button>
-        </div>
+    <dialog id="modalAviso" class="shadow-lg colorModal rounded-4">      
+            <p class="text-white text-center p-5">Correcto</p>
+            <p class="text-white text-center p-5">¿Seguro que quiere enviar el formulario?</p>
+           <div class="d-flex justify-content-evenly">
+                <button type="button" class="btn btn-lg btn-danger px-4 fs-4 bi bi-x-square" onclick="document.getElementById('modalAviso').close()" id="clickBoton6">No</button>    
+                <button type="button" class="btn btn-lg btn-success px-4 fs-4 bi bi-x-square" onclick="document.getElementById('modalAviso').close()" id="clickBoton7">Si</button>
+           </div>  
     </dialog>
 
     <dialog id="modalCrear" class="shadow-lg colorModal rounded-4">
@@ -93,6 +95,7 @@
             <button type="button" class="btn btn-lg btn-success px-4 fs-4 bi bi-x-square" onclick="document.getElementById('modalCrear').close()" id="clickBoton5">De acuerdo</button>
         </div>
     </dialog>
+    
     <main class="contenedor seccion">
         <h1>Crear</h1>
         <a href="/admin" class="btn btn-success fs-3 px-5 py-3">Volver</a>
@@ -112,33 +115,33 @@
                 <input class="form-control fs-4" type="text" id="titulo" name="titulo" placeholder="Titulo Propiedad" value="<?php echo $titulo;?>" required>
 
                 <label class="form-label fs-3" for="precio">Precio:</label>
-                <input class="form-control fs-4" type="number" id="precio" name="precio" placeholder="Precio Propiedad" value="<?php echo $precio;?>">
+                <input class="form-control fs-4" type="number" id="precio" name="precio" placeholder="Precio Propiedad" value="<?php echo $precio;?>" required>
 
                 <label class="fs-3" for="imagen">Imagen:</label>
                 <input class="form-control fs-4" type="file" id="imagen" accept="image/jpeg, image/png">
 
                 <label class="form-label fs-3" for="descripcion">Descripción:</label>
-                <textarea class="form-control fs-4" id="descripcion" name="descripcion" rows="6" ><?php echo $descripcion; ?></textarea>
+                <textarea class="form-control fs-4" id="descripcion" name="descripcion" rows="6" required><?php echo $descripcion; ?></textarea>
             </fieldset>
 
             <fieldset class="border mt-4">
                 <legend>Información Propiedad</legend>
 
                 <label for="habitaciones" class="form-label fs-3">Habitaciones</label>
-                <input type="number" class="form-control fs-4" id="habitaciones" name="habitaciones" placeholder="Ej: 3" min="1" max="9" value="<?php echo $habitaciones;?>">
+                <input type="number" class="form-control fs-4" id="habitaciones" name="habitaciones" placeholder="Ej: 3" min="1" max="9" value="<?php echo $habitaciones;?>" required>
 
                 <label for="wc" class="form-label fs-3">WC</label>
-                <input type="number" class="form-control fs-4" id="wc" name="wc" placeholder="Ej: 3" min="1" max="9" value="<?php echo $wc;?>">
+                <input type="number" class="form-control fs-4" id="wc" name="wc" placeholder="Ej: 3" min="1" max="9" value="<?php echo $wc;?>" required>
 
                 <label for="estacionamiento" class="form-label fs-3">Estacionamiento</label>
-                <input type="number" class="form-control fs-4" id="estacionamiento" name="estacionamiento" placeholder="Ej: 3" min="1" max="9" value="<?php echo $estacionamiento;?>">
+                <input type="number" class="form-control fs-4" id="estacionamiento" name="estacionamiento" placeholder="Ej: 3" min="1" max="9" value="<?php echo $estacionamiento;?>" required>
             </fieldset>
 
             <fieldset class="border mt-4">
                 <legend>Vendedores</legend>
 
                 <select class="form-control fs-3" aria-label="Default select example" name="vendedor">
-                    <option disabled value="">-- Seleccione --</option>
+                    <option selected disabled value="">-- Seleccione --</option>
                     <?php while($vendedor = mysqli_fetch_assoc($resultado)) : ?>
                         <option <?php echo $vendedores_id === $vendedor['id'] ? 'selected' : '';?> value="<?php echo $vendedor['id']; ?>"> <?php echo $vendedor['nombre'] . " " . $vendedor['apellido']; ?> </option>
                     <?php endwhile; ?>

@@ -20,20 +20,19 @@ function modalesFormulario(){
     const miModalX = document.getElementById("miModal");
     const miModalY = document.getElementById("miModal2");
     if (contactoBoton) {
-       contactoBoton.addEventListener('click', function() {
-        if (miFormulario.checkValidity()) {
-            miModalX.showModal();
-        }else{
-            miModalY.showModal();
-        }
-    }) 
+        contactoBoton.addEventListener('click', function() {
+            if (miFormulario.checkValidity()) {
+                miModalX.showModal();
+            }else{
+                miModalY.showModal();
+            }
+        }) 
     }
     if (miFormulario) {
         miFormulario.addEventListener('submit', function(event){
             event.preventDefault();
         });
     }
-    
     // const contactoBoton = document.getElementById('#contactoBoton');
     // contactoBoton.removeAttribute
     const clickBoton = document.querySelector('#clickBoton')
@@ -55,29 +54,30 @@ function modalesFormulario(){
 }
 
 function modalCrear() {
-    const modalCrear = document.querySelector("#modalCrear");
     const crearBoton = document.querySelector("#crearBoton");
     const miFormulario2 = document.querySelector("#miFormulario2");
     const modalAviso = document.querySelector("#modalAviso");
-
-    crearBoton.addEventListener('click', function() {
-        if (miFormulario2.checkValidity()) {
-            modalCrear.showModal();    
-        }else{
-            modalAviso.showModal(); 
-            modalAviso.addEventListener('close', function() {
-                miFormulario2.submit();   
-            })   
-        }        
-    })
-
+    const modalCrear = document.querySelector("#modalCrear");
+    const descripcion = document.querySelector("#descripcion");
+    
     miFormulario2.addEventListener('submit', function(event) {
         event.preventDefault();
-    });
-    modalCrear.addEventListener('close', function() {
-        miFormulario2.submit();
-    })
-}
+    })    
+        crearBoton.addEventListener('click', function() {
+        modalAviso.showModal();
+            modalAviso.addEventListener('close', function() {
+                if (descripcion.value.trim().length < 50) {
+                    miFormulario2.submit();    
+                }else {
+                    modalCrear.showModal();
+                    modalCrear.addEventListener('close', function() {
+                        miFormulario2.submit();
+                    })
+                }
+            })            
+        })  
+}  
+
 
 function navegacion() {
     const mobileMenu = document.querySelector('.d-md-none');
