@@ -59,25 +59,25 @@ function modalCrear() {
     const modalAviso = document.querySelector("#modalAviso");
     const modalCrear = document.querySelector("#modalCrear");
     const descripcion = document.querySelector("#descripcion");
+    const clickBoton7 = document.querySelector("#clickBoton7");
     
     miFormulario2.addEventListener('submit', function(event) {
         event.preventDefault();
-    })    
-        crearBoton.addEventListener('click', function() {
-        modalAviso.showModal();
-            modalAviso.addEventListener('close', function() {
-                if (descripcion.value.trim().length < 50) {
-                    miFormulario2.submit();    
-                }else {
-                    modalCrear.showModal();
-                    modalCrear.addEventListener('close', function() {
-                        miFormulario2.submit();
-                    })
-                }
-            })            
-        })  
+    }) 
+    crearBoton.addEventListener('click', function() {
+    modalAviso.showModal();
+        clickBoton7.addEventListener('click', function() {
+            if (descripcion.value.trim().length > 50 && miFormulario2.checkValidity()) {    
+                modalCrear.showModal();
+                modalCrear.addEventListener('close', function() {
+                    miFormulario2.submit();
+                })
+            }else {
+                miFormulario2.submit();
+            }
+        })                            
+    })     
 }  
-
 
 function navegacion() {
     const mobileMenu = document.querySelector('.d-md-none');
