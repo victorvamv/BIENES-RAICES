@@ -16,31 +16,31 @@
     incluirTemplate('header');
 ?>
 
-    <main class="contenedor seccion">
+    <main class="container">
         <h1>Administrador de Bienes Raices</h1>
         <a href="/admin/propiedades/crear.php" class="btn btn-success fs-3 px-5 py-3">Nueva Propiedad</a>
 
-        <table class="table mt-4 w-100">
-            <thead class="table-success">
+        <table class="table table-success table-striped table-hover mt-4 w-100">
+            <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Titulo</th>
-                    <th>Imagen</th>
-                    <th>Precio</th>
-                    <th>Acciones</th>
+                    <th class="col-1 ps-5">ID</th>
+                    <th class="col-2 ps-5">Titulo</th>
+                    <th class="col-4 ps-5">Imagen</th>
+                    <th class="col-2 ps-5">Precio</th>
+                    <th class="col-3 ps-5">Acciones</th>
                 </tr>
             </thead>
 
             <tbody>
                 <?php while( $propiedad = mysqli_fetch_assoc($resultadoConsulta)): ?>
                 <tr>
-                    <td><?php echo $propiedad['id']; ?></td>
-                    <td><?php echo $propiedad['titulo']; ?></td>
-                    <td width="100px"><img src="/imagenes/<?php echo $propiedad['imagen']; ?>"></td>
-                    <td><?php echo $propiedad['precio']; ?></td>
-                    <td>
-                        <a href="#" class="btn btn-danger col-8 fs-4 mt-3">Eliminar</a>
-                        <a href="admin/propiedades/actualizar.php?id=<?php echo $propiedad['id']; ?>" class="btn btn-naranja col-8 fs-4 mt-3">Actualizar</a>
+                    <td class="ps-5"><?php echo $propiedad['id']; ?></td>
+                    <td class="ps-5"><?php echo $propiedad['titulo']; ?></td>
+                    <td class="ps-5" width="100px"><img src="/imagenes/<?php echo $propiedad['imagen']; ?>"></td>
+                    <td>$<?php echo $propiedad['precio']; ?></td>
+                    <td class="ps-5">
+                        <a href="#" class="btn btn-danger col-12 fs-4 mt-3">Eliminar</a>
+                        <a href="admin/propiedades/actualizar.php?id=<?php echo $propiedad['id']; ?>" class="btn btn-naranja col-12 fs-4 mt-3">Actualizar</a>
                     </td>
                 </tr>
                 <?php endwhile; ?>

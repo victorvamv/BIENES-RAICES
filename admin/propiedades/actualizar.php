@@ -77,10 +77,6 @@
             $errores[] = "Falta el vendedor";
         }
 
-        if (!$imagen['name']) {
-            $errores[] = 'La Imagen es obligatoria';
-        } 
-
         $tamañoImagen = 100000;
 
         if ($imagen['size'] > $tamañoImagen) {
@@ -88,22 +84,25 @@
         }
 
         if (empty($errores)) {
-            // SUBIDA DE ARCHIVOS
-
             // Crear carpeta
             $carpetaImagenes = '../../imagenes/';
 
             if(!is_dir($carpetaImagenes)) {
                 mkdir($carpetaImagenes);
             }
-            // Generar un nombre único
-            $nombreImagen = md5( uniqid( rand(), true ) ) . ".jpg";
 
+            if ($imagen['name']) {
+                // Eliminar la imagen previa
+                unlink($carpetaImagenes . $propiedad['imagen']);
+                // Generar un nombre único
+                $nombreImagen = md5( uniqid( rand(), true ) ) . ".jpg";
+                //Subir la imagen
+                move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
+            } else {
+                $nombreImagen = $propiedad['imagen'];
+            }
 
-            //Subir la imagen
-            move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
-            
-            $consulta = " INSERT INTO propiedades ( titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id ) VALUES ( '$titulo', '$precio', '$nombreImagen', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedores_id' ) ";
+            $consulta = "UPDATE propiedades SET titulo = '${titulo}', precio = '${precio}', imagen = '${nombreImagen}', descripcion = '${descripcion}', habitaciones = ${habitaciones}, wc = ${wc}, estacionamiento = ${estacionamiento}, vendedores_id = ${vendedores_id} WHERE id = ${id} ";
             // echo $consulta;
             $resultado = mysqli_query($db, $consulta);
 
@@ -149,7 +148,7 @@
             </div>
         <?php endforeach; ?>
 
-        <form class="p-4" method="POST" action="/admin/propiedades/crear.php" id="miFormulario2" enctype="multipart/form-data">
+        <form class="p-4" method="POST" id="miFormulario2" enctype="multipart/form-data">
             <fieldset class="border">
                 <legend class="h3">Informacion General</legend>
 
@@ -164,7 +163,6 @@
 
                 <img src="/imagenes/<?php echo $imagenPropiedad; ?>" class="col-2">
                 
-
                 <label class="form-label fs-3" for="descripcion">Descripción:</label>
                 <textarea class="form-control fs-4" id="descripcion" name="descripcion" rows="6" required><?php echo $descripcion; ?></textarea>
             </fieldset>
