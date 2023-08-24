@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     modalesFormulario();
     darkmode();
     modalCrear();
+    modalEliminarX();
 });
 
 function darkmode() {
@@ -60,24 +61,52 @@ function modalCrear() {
     const modalCrear = document.querySelector("#modalCrear");
     const descripcion = document.querySelector("#descripcion");
     const clickBoton7 = document.querySelector("#clickBoton7");
+
+    if(miFormulario2){
+        miFormulario2.addEventListener('submit', function(event) {
+            event.preventDefault();
+        })   
+    }
     
-    miFormulario2.addEventListener('submit', function(event) {
-        event.preventDefault();
-    }) 
-    crearBoton.addEventListener('click', function() {
-    modalAviso.showModal();
-        clickBoton7.addEventListener('click', function() {
-            if (descripcion.value.trim().length > 50 && miFormulario2.checkValidity()) {    
-                modalCrear.showModal();
-                modalCrear.addEventListener('close', function() {
+    
+    if(crearBoton){
+        crearBoton.addEventListener('click', function() {
+        modalAviso.showModal();
+            clickBoton7.addEventListener('click', function() {
+                if (descripcion.value.trim().length > 50 && miFormulario2.checkValidity()) {    
+                    modalCrear.showModal();
+                    modalCrear.addEventListener('close', function() {
+                        miFormulario2.submit();
+                    })
+                }else {
                     miFormulario2.submit();
-                })
-            }else {
-                miFormulario2.submit();
-            }
-        })                            
-    })     
-}  
+                }
+            })                            
+        })        
+    }     
+}
+
+function modalEliminarX() {
+    const modalAvisoEliminar = document.querySelector('#modalAvisoEliminar');
+    const modalEliminar = document.querySelector('#modalEliminar');
+    const clickBoton10 = document.querySelector('#clickBoton10');
+    const formularioEliminar = document.querySelector('#formularioEliminar');
+    const botonEliminar = document.querySelector('#botonEliminar');
+
+    formularioEliminar.addEventListener('submit', function(event){
+        event.preventDefault();
+    })
+
+    botonEliminar.addEventListener('click', function() {   
+        modalAvisoEliminar.showModal()
+        clickBoton10.addEventListener('click', function(){
+            modalEliminar.showModal();
+            modalEliminar.addEventListener('close', function(){
+                formularioEliminar.submit();
+            })
+        })
+    })
+}
 
 function navegacion() {
     const mobileMenu = document.querySelector('.d-md-none');
