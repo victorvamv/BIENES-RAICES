@@ -14,12 +14,12 @@
         $id = filter_var($id, FILTER_VALIDATE_INT);
 
         if($id){
-            $query = "SELECT imagen FROM propiedades WHERE id = ${id}";
+            $query = "SELECT imagen FROM propiedades WHERE id = $id";
             $resultado = mysqli_query($db, $query);
             $propiedad = mysqli_fetch_assoc($resultado);
             unlink('../imagenes/' . $propiedad['imagen']);
             // Eliminar la propiedad 
-            $query = "DELETE FROM propiedades WHERE id = ${id}";
+            $query = "DELETE FROM propiedades WHERE id = $id";
             $resultado = mysqli_query($db, $query);
 
             if($resultado) {
@@ -74,9 +74,9 @@
                     <td class="ps-5" width="100px"><img src="../imagenes/<?php echo $propiedad['imagen']; ?>"></td>
                     <td>$<?php echo $propiedad['precio']; ?></td>
                     <td class="ps-5">
-                        <form method="POST" class="w-100" id="formularioEliminar">
+                        <form method="POST" class="formularioEliminar w-100">
                             <input type="hidden" name="id" value="<?php echo $propiedad['id']; ?>">
-                            <input type="submit" class="btn btn-danger col-12 fs-4 mt-3" value="Eliminar" id="botonEliminar">    
+                            <input type="submit" class="botonEliminar btn btn-danger col-12 fs-4 mt-3" value="Eliminar" >    
                         </form>
                         <a href="admin/propiedades/actualizar.php?id=<?php echo $propiedad['id']; ?>" class="btn btn-naranja col-12 fs-4 mt-3">Actualizar</a>
                     </td>

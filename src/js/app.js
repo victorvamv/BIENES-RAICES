@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     modalEliminarX();
 });
 
+
+
 function darkmode() {
     const darkMode = document.querySelector('img[type="button"]');
 
@@ -78,7 +80,7 @@ function modalCrear() {
                     modalCrear.addEventListener('close', function() {
                         miFormulario2.submit();
                     })
-                }else {
+                } else {
                     miFormulario2.submit();
                 }
             })                            
@@ -86,26 +88,37 @@ function modalCrear() {
     }     
 }
 
+
 function modalEliminarX() {
     const modalAvisoEliminar = document.querySelector('#modalAvisoEliminar');
     const modalEliminar = document.querySelector('#modalEliminar');
     const clickBoton10 = document.querySelector('#clickBoton10');
-    const formularioEliminar = document.querySelector('#formularioEliminar');
-    const botonEliminar = document.querySelector('#botonEliminar');
+    const formularioEliminar = document.querySelectorAll('.formularioEliminar');
+    const botonEliminar = document.querySelectorAll('.botonEliminar');
+    
+    formularioEliminar.forEach(function(formulario){
+        formulario.addEventListener('submit', function(event){
+            event.preventDefault();
 
-    formularioEliminar.addEventListener('submit', function(event){
-        event.preventDefault();
-    })
+            clickBoton10.addEventListener('click', function(){
+                
+                modalEliminar.showModal();
 
-    botonEliminar.addEventListener('click', function() {   
-        modalAvisoEliminar.showModal()
-        clickBoton10.addEventListener('click', function(){
-            modalEliminar.showModal();
-            modalEliminar.addEventListener('close', function(){
-                formularioEliminar.submit();
-            })
-        })
+                if (window.performance) {
+                    formulario.submit();   
+                }
+            })   
+        })  
     })
+    
+    
+    botonEliminar.forEach(function(boton) {
+        boton.addEventListener('click', function() { 
+            modalAvisoEliminar.showModal();    
+        })  
+    })   
+        
+           
 }
 
 function navegacion() {
