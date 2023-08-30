@@ -12,11 +12,11 @@
     $errores = [];
 
     $titulo = '';
-    $precio = '';
-    $descripcion = '';
-    $habitaciones = '';
-    $wc = '';
-    $estacionamiento = '';
+    $precio = '5000000';
+    $descripcion = 'Descripcion minima de 50 caracteresDescripcion minima de 50 caracteresDescripcion minima de 50 caracteresDescripcion minima de 50 caracteres';
+    $habitaciones = '8';
+    $wc = '4';
+    $estacionamiento = '3';
     $vendedorID = '';
 
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -106,10 +106,10 @@
     <dialog id="modalAviso" class="shadow-lg colorModal rounded-4">      
             <p class="text-white text-center p-5">Correcto</p>
             <p class="text-white text-center p-5">¿Seguro que quiere enviar el formulario?</p>
-           <div class="d-flex justify-content-evenly">
-                <button type="button" class="btn btn-lg btn-danger px-4 fs-4 bi bi-x-square" onclick="document.getElementById('modalAviso').close()" id="clickBoton6">No</button>    
-                <button type="button" class="btn btn-lg btn-success px-4 fs-4 bi bi-x-square" onclick="document.getElementById('modalAviso').close()" id="clickBoton7">Si</button>
-           </div>  
+            <div class="d-flex justify-content-evenly">
+                    <button type="button" class="btn btn-lg btn-danger px-4 fs-4 bi bi-x-square" onclick="document.getElementById('modalAviso').close()" id="clickBoton6">No</button>    
+                    <button type="button" class="btn btn-lg btn-success px-4 fs-4 bi bi-x-square" onclick="document.getElementById('modalAviso').close()" id="clickBoton7">Si</button>
+            </div>  
     </dialog>
 
     <dialog id="modalCrear" class="shadow-lg colorModal rounded-4">

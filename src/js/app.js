@@ -99,26 +99,20 @@ function modalEliminarX() {
     formularioEliminar.forEach(function(formulario){
         formulario.addEventListener('submit', function(event){
             event.preventDefault();
+   
 
-            clickBoton10.addEventListener('click', function(){
-                
-                modalEliminar.showModal();
-
-                if (window.performance) {
-                    formulario.submit();   
-                }
-            })   
-        })  
-    })
-    
-    
+    clickBoton10.addEventListener('click', function(){
+        formulario.submit();
+    })    
+        modalEliminar.showModal();
+         })
+    })   
+          
     botonEliminar.forEach(function(boton) {
         boton.addEventListener('click', function() { 
             modalAvisoEliminar.showModal();    
         })  
-    })   
-        
-           
+    })            
 }
 
 function navegacion() {
