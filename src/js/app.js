@@ -89,6 +89,7 @@ function modalCrear() {
 }
 
 
+
 function modalEliminarX() {
     const modalAvisoEliminar = document.querySelector('#modalAvisoEliminar');
     const modalEliminar = document.querySelector('#modalEliminar');
@@ -99,15 +100,16 @@ function modalEliminarX() {
     formularioEliminar.forEach(function(formulario){
         formulario.addEventListener('submit', function(event){
             event.preventDefault();
-   
 
-    clickBoton10.addEventListener('click', function(){
-        formulario.submit();
+            
+        })
+        clickBoton10.addEventListener('click', function(){
+            formulario.submit();
+            setTimeout(function() {
+                modalEliminar.showModal();
+            }, 1000); // Mostrar después de 1 segundo  
+        })    
     })    
-        modalEliminar.showModal();
-         })
-    })   
-          
     botonEliminar.forEach(function(boton) {
         boton.addEventListener('click', function() { 
             modalAvisoEliminar.showModal();    
