@@ -70,7 +70,6 @@ function modalCrear() {
         })   
     }
     
-    
     if(crearBoton){
         crearBoton.addEventListener('click', function() {
         modalAviso.showModal();
@@ -87,29 +86,35 @@ function modalCrear() {
         })        
     }     
 }
-
-
-
+// const modalEliminar = document.querySelector('#modalEliminar');
+// window.addEventListener("load", (event) => {
+//     modalEliminar.showModal()    
+// });
 function modalEliminarX() {
     const modalAvisoEliminar = document.querySelector('#modalAvisoEliminar');
     const modalEliminar = document.querySelector('#modalEliminar');
     const clickBoton10 = document.querySelector('#clickBoton10');
     const formularioEliminar = document.querySelectorAll('.formularioEliminar');
     const botonEliminar = document.querySelectorAll('.botonEliminar');
+    const recargarPagina = document.querySelector('body');
     
     formularioEliminar.forEach(function(formulario){
         formulario.addEventListener('submit', function(event){
-            event.preventDefault();
-
-            
+            event.preventDefault();      
         })
+    }) 
+    var recargar = "load"
+    var norecargar = "" 
+    window.addEventListener("load", (event) => {
+        modalEliminar.showModal()                
+    });
+      
+    formularioEliminar.forEach(function(formulario){
         clickBoton10.addEventListener('click', function(){
-            formulario.submit();
-            setTimeout(function() {
-                modalEliminar.showModal();
-            }, 1000); // Mostrar después de 1 segundo  
-        })    
-    })    
+            formulario.submit();  
+        })     
+    })
+       
     botonEliminar.forEach(function(boton) {
         boton.addEventListener('click', function() { 
             modalAvisoEliminar.showModal();    
