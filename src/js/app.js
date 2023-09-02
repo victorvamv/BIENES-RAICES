@@ -96,21 +96,21 @@ function modalEliminarX() {
     const clickBoton10 = document.querySelector('#clickBoton10');
     const formularioEliminar = document.querySelectorAll('.formularioEliminar');
     const botonEliminar = document.querySelectorAll('.botonEliminar');
-    const recargarPagina = document.querySelector('body');
     
     formularioEliminar.forEach(function(formulario){
         formulario.addEventListener('submit', function(event){
-            event.preventDefault();      
+            event.preventDefault();  
+            
+            
         })
     }) 
-    var recargar = "load"
-    var norecargar = "" 
+
     window.addEventListener("load", (event) => {
         modalEliminar.showModal()                
     });
-      
+
+    clickBoton10.addEventListener('click', function(){
     formularioEliminar.forEach(function(formulario){
-        clickBoton10.addEventListener('click', function(){
             formulario.submit();  
         })     
     })
