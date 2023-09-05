@@ -99,27 +99,32 @@ function modalEliminarX() {
     
     formularioEliminar.forEach(function(formulario){
         formulario.addEventListener('submit', function(event){
-            event.preventDefault();  
-            
-            
+            event.preventDefault();   
         })
     }) 
-
-    window.addEventListener("load", (event) => {
-        modalEliminar.showModal()                
-    });
-
-    clickBoton10.addEventListener('click', function(){
-    formularioEliminar.forEach(function(formulario){
-            formulario.submit();  
-        })     
-    })
-       
+    // window.addEventListener("load", (event) => {
+    //     // const formulario = event.closest('.formularioEliminar');
+    //     modalEliminar.showModal()                  
+    // }); 
     botonEliminar.forEach(function(boton) {
         boton.addEventListener('click', function() { 
             modalAvisoEliminar.showModal();    
         })  
-    })            
+    }) 
+
+    botonEliminar.forEach(function(boton) {
+        boton.addEventListener('click', function() {
+                // const formulario = event.closest('.formularioEliminar');
+                // const inputId = formulario.querySelector('input[name="id"]');
+                // const valorId = inputId.value;
+                // console.log('Valor del campo "id":', valorId);
+            clickBoton10.addEventListener('click', function(){
+                const formulario = boton.closest('.formularioEliminar');
+                formulario.submit();   
+            })
+               
+        })
+    })   
 }
 
 function navegacion() {
