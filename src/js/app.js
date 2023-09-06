@@ -102,29 +102,37 @@ function modalEliminarX() {
             event.preventDefault();   
         })
     }) 
-    // window.addEventListener("load", (event) => {
-    //     // const formulario = event.closest('.formularioEliminar');
-    //     modalEliminar.showModal()                  
-    // }); 
+    
     botonEliminar.forEach(function(boton) {
         boton.addEventListener('click', function() { 
             modalAvisoEliminar.showModal();    
         })  
     }) 
+        
+    window.addEventListener("load", function() {
+        let falso = false;
+        modalEliminar.showModal()
+    })
 
     botonEliminar.forEach(function(boton) {
-        boton.addEventListener('click', function() {
+        boton.addEventListener('click', function(presionar) {
                 // const formulario = event.closest('.formularioEliminar');
                 // const inputId = formulario.querySelector('input[name="id"]');
                 // const valorId = inputId.value;
                 // console.log('Valor del campo "id":', valorId);
-            clickBoton10.addEventListener('click', function(){
-                const formulario = boton.closest('.formularioEliminar');
-                formulario.submit();   
-            })
-               
+            clickBoton10.addEventListener('click', formularioEliminar2(boton));
+                // let valor = confirmacionEliminacion()
+                // valor = true
+                // console.log(valor)         
         })
-    })   
+        function formularioEliminar2(boton){
+            const formulario = boton.closest('.formularioEliminar');
+            console.log(formulario)
+            // formulario.submit();
+            // let verdadero = true;
+            // return verdadero;      
+        }
+    })        
 }
 
 function navegacion() {
