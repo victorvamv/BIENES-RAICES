@@ -6,11 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     modalEliminarX();
 });
 
-
-
 function darkmode() {
     const darkMode = document.querySelector('img[type="button"]');
-
     darkMode.addEventListener('click', function() {
         document.body.classList.toggle('dark-mode-boton');
     });
@@ -86,10 +83,7 @@ function modalCrear() {
         })        
     }     
 }
-// const modalEliminar = document.querySelector('#modalEliminar');
-// window.addEventListener("load", (event) => {
-//     modalEliminar.showModal()    
-// });
+
 function modalEliminarX() {
     const modalAvisoEliminar = document.querySelector('#modalAvisoEliminar');
     const modalEliminar = document.querySelector('#modalEliminar');
@@ -108,30 +102,26 @@ function modalEliminarX() {
             modalAvisoEliminar.showModal();    
         })  
     }) 
-        
-    window.addEventListener("load", function() {
-        let falso = false;
-        modalEliminar.showModal()
-    })
-
+    
+    window.addEventListener('load', function() {
+        const boton10Clicado = localStorage.getItem('boton10Clicado');
+        if (boton10Clicado === 'true') {
+            // Mostrar el modal después de la recarga
+            modalEliminar.showModal()
+            // Limpiar el valor almacenado para que el modal no se muestre nuevamente
+            localStorage.removeItem('boton10Clicado');
+        }
+    });
+    
     botonEliminar.forEach(function(boton) {
         boton.addEventListener('click', function(presionar) {
-                // const formulario = event.closest('.formularioEliminar');
-                // const inputId = formulario.querySelector('input[name="id"]');
-                // const valorId = inputId.value;
-                // console.log('Valor del campo "id":', valorId);
-            clickBoton10.addEventListener('click', formularioEliminar2(boton));
-                // let valor = confirmacionEliminacion()
-                // valor = true
-                // console.log(valor)         
+            clickBoton10.addEventListener('click', function() {
+                // Al hacer clic en el botón, almacenar un valor en el almacenamiento local
+                localStorage.setItem('boton10Clicado', 'true');
+                const formulario = boton.closest('.formularioEliminar');
+                formulario.submit()
+            });       
         })
-        function formularioEliminar2(boton){
-            const formulario = boton.closest('.formularioEliminar');
-            console.log(formulario)
-            // formulario.submit();
-            // let verdadero = true;
-            // return verdadero;      
-        }
     })        
 }
 
