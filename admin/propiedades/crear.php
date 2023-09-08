@@ -146,7 +146,7 @@
                 <input class="form-control fs-4" type="number" id="precio" name="precio" placeholder="Precio Propiedad" value="<?php echo $precio;?>" required>
 
                 <label class="fs-3" for="imagen">Imagen:</label>
-                <input class="form-control fs-4" type="file" id="imagen" accept="image/jpeg, image/png" name="imagen">
+                <input class="form-control fs-4" type="file" id="imagen" accept="image/jpeg, image/png" name="imagen" required>
 
                 <label class="form-label fs-3" for="descripcion">Descripción:</label>
                 <textarea class="form-control fs-4" id="descripcion" name="descripcion" rows="6" required><?php echo $descripcion; ?></textarea>

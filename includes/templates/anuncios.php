@@ -15,25 +15,25 @@
     <?php while($propiedad = mysqli_fetch_assoc($resultado)): ?>
     <div class="col mt-5">
         <div class="card text-bg-light border border-3">
-            <img src="build/img/anuncio1.jpg" class="card-img-top" alt="Imagen 1">
+            <img loading="lazy" src="/imagenes/<?php echo $propiedad['imagen']; ?>">
             <div class="card-body anuncio">
                 <div class="p-5">
-                    <div class="h3 text-center">Casa de Lujo en el Lago</div>
-                    <p>Casa en el lago con excelente vista, acabados de lujo a un buen precio</p>
-                    <p class="text-success fw-bold fs-1">$3,000,000</p>
+                    <div class="h3 text-center"><?php echo $propiedad['titulo']; ?></div>
+                    <p><?php echo $propiedad['descripcion']; ?></p>
+                    <p class="text-success fw-bold fs-1"><?php echo $propiedad['precio']; ?></p>
 
                     <ul class="iconos-caracteristicas d-flex">
                         <li class="d-flex justify-content-center">
                             <img class="icono" loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
-                            <p>3</p>
+                            <p><?php echo $propiedad['wc']; ?></p>
                         </li>
                         <li class="d-flex justify-content-center">
                             <img class="icono" loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
-                            <p>3</p>
+                            <p><?php echo $propiedad['estacionamiento']; ?></p>
                         </li>
                         <li class="d-flex justify-content-center">
                             <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
-                            <p>4</p>
+                            <p><?php echo $propiedad['habitaciones']; ?></p>
                         </li>
                     </ul>
                     <div class="pt-5">
