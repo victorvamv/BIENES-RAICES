@@ -90,12 +90,13 @@ function modalEliminarX() {
     const clickBoton10 = document.querySelector('#clickBoton10');
     const formularioEliminar = document.querySelectorAll('.formularioEliminar');
     const botonEliminar = document.querySelectorAll('.botonEliminar');
-    
+    const nombrePropiedad = document.querySelectorAll('.titulo')
     formularioEliminar.forEach(function(formulario){
         formulario.addEventListener('submit', function(event){
             event.preventDefault();   
         })
-    }) 
+    })
+    
     
     botonEliminar.forEach(function(boton) {
         boton.addEventListener('click', function() { 
@@ -119,7 +120,7 @@ function modalEliminarX() {
                 // Al hacer clic en el botón, almacenar un valor en el almacenamiento local
                 localStorage.setItem('boton10Clicado', 'true');
                 const formulario = boton.closest('.formularioEliminar');
-                formulario.submit()
+                // formulario.submit()
             });       
         })
     })        
