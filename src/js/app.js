@@ -120,7 +120,7 @@ function modalEliminarX() {
                 // Al hacer clic en el botón, almacenar un valor en el almacenamiento local
                 localStorage.setItem('boton10Clicado', 'true');
                 const formulario = boton.closest('.formularioEliminar');
-                // formulario.submit()
+                formulario.submit()
             });       
         })
     })        

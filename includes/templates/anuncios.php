@@ -20,7 +20,7 @@
                 <div class="p-5">
                     <div class="h3 text-center"><?php echo $propiedad['titulo']; ?></div>
                     <p><?php echo $propiedad['descripcion']; ?></p>
-                    <p class="text-success fw-bold fs-1"><?php echo $propiedad['precio']; ?></p>
+                    <p class="text-success fw-bold fs-1">$<?php echo $propiedad['precio']; ?></p>
 
                     <ul class="iconos-caracteristicas d-flex">
                         <li class="d-flex justify-content-center">

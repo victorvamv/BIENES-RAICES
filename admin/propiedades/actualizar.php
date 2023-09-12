@@ -77,7 +77,7 @@
             $errores[] = "Falta el vendedor";
         }
 
-        $tamañoImagen = 100000;
+        $tamañoImagen = 400000;
 
         if ($imagen['size'] > $tamañoImagen) {
             $errores[] = 'La imagen es muy pesada';
