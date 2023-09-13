@@ -11,7 +11,7 @@
     require '../../includes/config/database.php';
     $db = conectarDB();
 
-    $consulta = "SELECT * FROM propiedades WHERE id = ${id}";
+    $consulta = "SELECT * FROM propiedades WHERE id = {$id}";
     $resultado = mysqli_query($db, $consulta);
     $propiedad = mysqli_fetch_assoc($resultado); 
 
@@ -102,7 +102,7 @@
                 $nombreImagen = $propiedad['imagen'];
             }
 
-            $consulta = "UPDATE propiedades SET titulo = '${titulo}', precio = '${precio}', imagen = '${nombreImagen}', descripcion = '${descripcion}', habitaciones = ${habitaciones}, wc = ${wc}, estacionamiento = ${estacionamiento}, vendedores_id = ${vendedores_id} WHERE id = ${id} ";
+            $consulta = "UPDATE propiedades SET titulo = '{$titulo}', precio = '{$precio}', imagen = '{$nombreImagen}', descripcion = '{$descripcion}', habitaciones = {$habitaciones}, wc = {$wc}, estacionamiento = {$estacionamiento}, vendedores_id = {$vendedores_id} WHERE id = {$id} ";
             // echo $consulta;
             $resultado = mysqli_query($db, $consulta);
 

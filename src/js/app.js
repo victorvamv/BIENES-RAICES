@@ -45,7 +45,7 @@ function modalesFormulario(){
                     miModalC.showModal();
                     miModalC.addEventListener('close', function() {
                         miFormulario.submit();
-                        window.location.href = "index.html";
+                        window.location.href = "index.php";
                     }) //#miModal3   
                 });//#miModal    
             }

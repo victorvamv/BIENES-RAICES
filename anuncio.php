@@ -1,4 +1,27 @@
 <?php
+
+    $id = $_GET['id'];
+    $id = filter_var($id, FILTER_VALIDATE_INT);
+
+    if(!$id){
+        header('Location: /');
+    }
+    // Importar la conexión
+    require 'includes/config/database.php';
+    $db = conectarDB();
+
+    // Consultar 
+    $query = "SELECT * FROM propiedades WHERE id = {$id}";
+
+    // Obtener resultado 
+    $resultado = mysqli_query($db, $query);
+
+    // echo "<pre>";
+    // var_dump($resultado);
+    // echo "<pre>";
+      
+    $propiedad = mysqli_fetch_assoc($resultado);
+
     require 'includes/funciones.php';
     incluirTemplate('header');
 ?>
@@ -6,48 +29,38 @@
     <main class="container" style="text-align: justify;">
         <div class="row justify-content-center">
             <div class="col-11 col-md-8 col-lg-7 col-xl-6">
-                <div class="h1 p-5">Casa en Venta frente al bosque</div>
+                <div class="p-5 h1 text-center"><?php echo $propiedad['titulo']; ?></div>
 
-                <picture>
-                    <source srcset="build/img/destacada.webp" type="image/webp">
-                    <source srcset="build/img/destacada.jpg" type="image/jpeg">
-                    <img loading="lazy" src="build/img/destacada.jpg" alt="Imagen de la Propiedad">
-                </picture>
-
+                <img loading="lazy" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="Imagen de la Propiedad">
+            
                 <div>
-                    <p class="text-center text-success fw-bold fs-1 p-4">
-                        $3,000,000
+                    <p class="text-center text-success fw-bold fs-1 py-5">
+                        $<?php echo number_format($propiedad['precio']); ?>
                     </p>
                    
-                       <ul class="iconos-caracteristicas d-flex">
-                            <li class="d-flex justify-content-center">
-                                <img class="icono2" loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
-                                <p>3</p>
-                            </li>
-                            <li class="d-flex justify-content-center">
-                                <img class="icono2" loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
-                                <p>3</p>
-                            </li>
-                            <li class="d-flex justify-content-center">
-                                <img class="icono2" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
-                                <p>4</p>
-                            </li>
-                        </ul> 
-                   
+                    <ul class="iconos-caracteristicas d-flex">
+                        <li class="d-flex justify-content-center">
+                            <img class="icono2" loading="lazy" src="assets/icons/badge-wc.svg" alt="Icono Baño">
+                            <p><?php echo $propiedad['wc']; ?></p>
+                        </li>
+                        <li class="d-flex justify-content-center">
+                            <img class="icono2" loading="lazy" src="assets/icons/car-front.svg" alt="Icono Estacionamiento">
+                            <p><?php echo $propiedad['estacionamiento']; ?></p>
+                        </li>
+                        <li class="d-flex justify-content-center">
+                            <img class="icono2" loading="lazy" src="build/img/icono_dormitorio.svg" alt="Icono Habitaciones">
+                            <p><?php echo $propiedad['habitaciones']; ?></p>
+                        </li>
+                    </ul>
                     
-                    <p>
-                        Vestibulum vestibulum ipsum eget vulputate placerat. Nullam faucibus, ante ut sollicitudin eleifend,
-                        massa est congue ante, in commodo neque libero id dui. Nullam hendrerit tempor ornare. Nullam eu 
-                        consectetur nisi. Maecenas ac varius diam. Nulla nec fermentum eros. Mauris quis massa et lacus mollis 
-                        auctor in eget lectus. Donec tincidunt tincidunt auctor. Vivamus quis dictum massa. Vestibulum euismod, 
-                        sapien eget consectetur tempor, nisi leo facilisis mi, et efficitur mauris ex tincidunt libero. 
-                        Pellentesque semper nisi non nunc pulvinar, nec venenatis turpis scelerisque. Maecenas et dolor in nulla 
-                        posuere aliquet. Nulla vel justo finibus, maximus justo non, euismod tellus.
-                    </p>
+                    <p class="py-5"><?php echo $propiedad['descripcion']; ?></p>
+                    
                 </div> 
             </div>       
         </div>
     </main> 
     <?php
+        mysqli_close($db);
+
         incluirTemplate('footer');
     ?>

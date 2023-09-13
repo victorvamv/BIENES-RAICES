@@ -20,7 +20,7 @@
                         25 años de experiencia
                     </blockquote>
 
-                    <p>
+                    <p class="texto-nosotros">
                         Sed porttitor vulputate tortor, in tristique metus aliquet a. Proin luctus lacinia porttitor. 
                         Fusce facilisis iaculis dolor nec efficitur. Praesent in sapien sed sem pellentesque elementum. 
                         Suspendisse nulla sem, imperdiet scelerisque tempus eget, hendrerit non arcu. Mauris eu nisl 
@@ -28,7 +28,7 @@
                         diam, et porta dui.
                     </p>
 
-                    <p>
+                    <p class="texto-nosotros">
                         Duis dignissim ultricies lectus, nec porta erat congue vitae. Praesent lacinia, enim vitae 
                         accumsan bibendum, felis velit laoreet leo, volutpat convallis orci sapien ac velit. Donec 
                         ultrices magna sit amet dolor posuere rutrum.

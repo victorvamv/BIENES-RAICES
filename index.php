@@ -41,7 +41,7 @@
         ?>
 
         <div class="d-grid d-md-flex justify-content-md-end py-5">
-            <a class="btn btn-primary2 btn-lg py-3 px-5 fw-semibold fs-3" href="anuncios.html" role="button">Ver Todas</a>
+            <a class="btn btn-primary2 btn-lg py-3 px-5 fw-semibold fs-3" href="anuncios.php" role="button">Ver Todas</a>
         </div>
     </section>
 
@@ -50,7 +50,7 @@
                 <div class="h2 text-center p-3">Encuentra la casa de tus sueños</div>
                 <p class="text-center p-3">Llena el formulario de contacto y un asesor se pondrá en contacto contigo a la brevedad</p>
                 <div class="container d-grid d-md-flex justify-content-md-center">
-                    <a class="btn btn-primary3 btn-lg py-3 px-5 fw-semibold fs-3" href="contacto.html" role="button">Contactanos</a>
+                    <a class="btn btn-primary3 btn-lg py-3 px-5 fw-semibold fs-3" href="contacto.php" role="button">Contactanos</a>
                 </div>
         </div>    
     </section>
@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="col-md-8 mt-4">
-                        <a href="entrada.html" class="text-decoration-none">
+                        <a href="entrada.php" class="text-decoration-none">
                             <div class="h2 fw-bold">Terraza en el techo de tu casa</div>
                                     <div class="progress col-4 col-sm-2 col-md-4 col-xl-3 mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                                         <div class="progress-bar bg-success2" style="width: 100%"></div>
@@ -92,7 +92,7 @@
                     </div>
 
                     <div class="col-md-8 mt-4">
-                        <a href="entrada.html" class="text-decoration-none mt-5">
+                        <a href="entrada.php" class="text-decoration-none mt-5">
                             <div class="h2 fw-bold">Guia para la decoración de tu hogar</div>
                                 <div class="progress col-4 col-sm-2 col-md-4 col-xl-3 mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                                     <div class="progress-bar bg-success2" style="width: 100%"></div>

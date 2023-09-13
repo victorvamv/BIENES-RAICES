@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="col-md-8 col-lg-8">
-                    <a href="entrada.html" class="text-decoration-none">
+                    <a href="entrada.php" class="text-decoration-none">
                         <div class="h2 fw-bold">Terraza en el techo de tu casa</div>
                                 <div class="progress col-4 col-sm-2 col-md-4 col-xl-3 mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                                     <div class="progress-bar bg-success2" style="width: 100%"></div>
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="col-md-8 col-lg-8">
-                    <a href="entrada.html" class="text-decoration-none mt-5">
+                    <a href="entrada.php" class="text-decoration-none mt-5">
                         <div class="h2 fw-bold">Guia para la decoración de tu hogar</div>
                             <div class="progress col-4 col-sm-2 col-md-4 col-xl-3 mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                                 <div class="progress-bar bg-success2" style="width: 100%"></div>
@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="col-md-8 col-lg-8">
-                    <a href="entrada.html" class="text-decoration-none">
+                    <a href="entrada.php" class="text-decoration-none">
                         <div class="h2 fw-bold">Terraza en el techo de tu casa</div>
                                 <div class="progress col-4 col-sm-2 col-md-4 col-xl-3 mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                                     <div class="progress-bar bg-success2" style="width: 100%"></div>
@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="col-md-8 col-lg-8">
-                    <a href="entrada.html" class="text-decoration-none mt-5">
+                    <a href="entrada.php" class="text-decoration-none mt-5">
                         <div class="h2 fw-bold">Guia para la decoración de tu hogar</div>
                             <div class="progress col-4 col-sm-2 col-md-4 col-xl-3 mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
                                 <div class="progress-bar bg-success2" style="width: 100%"></div>

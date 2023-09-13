@@ -19,8 +19,8 @@
             <div class="card-body anuncio">
                 <div class="p-5">
                     <div class="h3 text-center"><?php echo $propiedad['titulo']; ?></div>
-                    <p><?php echo $propiedad['descripcion']; ?></p>
-                    <p class="text-success fw-bold fs-1">$<?php echo $propiedad['precio']; ?></p>
+                    <p class="texto-anuncios"><?php echo $propiedad['descripcion']; ?></p>
+                    <p class="text-success fw-bold fs-1">$<?php echo number_format($propiedad['precio']); ?></p>
 
                     <ul class="iconos-caracteristicas d-flex">
                         <li class="d-flex justify-content-center">
@@ -37,7 +37,7 @@
                         </li>
                     </ul>
                     <div class="pt-5">
-                        <a class="d-grid btn btn-primary3 btn-lg py-3 fw-semibold fs-3" href="anuncio.html" role="button">Ver Propiedad</a>  
+                        <a class="d-grid btn btn-primary btn-lg py-3 fw-semibold fs-3" href="anuncio.php?id=<?php echo $propiedad['id']; ?>" role="button">Ver Propiedad</a>  
                     </div>
                 </div> <!--.p-5-->
             </div> <!--.card-body-->
