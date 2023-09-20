@@ -1,4 +1,10 @@
 <?php
+    require '../includes/funciones.php';
+    $auth = estaAutenticado();
+
+    if(!$auth) {
+        header('Location: /');
+    }
     // Importar la conexion
     require '../includes/config/database.php';
     $db = conectarDB();
@@ -27,7 +33,7 @@
             }
         }
     }
-    require '../includes/funciones.php';
+    
     incluirTemplate('header');
 ?>
     <dialog id="modalAvisoEliminar" class="shadow-lg colorModal rounded-4">      

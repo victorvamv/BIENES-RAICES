@@ -1,5 +1,11 @@
 <?php
+    require '../../includes/funciones.php';
+    $auth = estaAutenticado();
 
+    if(!$auth) {
+        header('Location: /');
+    }
+    
     require '../../includes/config/database.php';
 
     $db = conectarDB();
@@ -99,8 +105,6 @@
         }    
     }
 
-
-    require '../../includes/funciones.php';
     incluirTemplate('header');
 ?>
     <dialog id="modalAviso" class="shadow-lg colorModal rounded-4">      

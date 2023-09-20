@@ -1,3 +1,9 @@
+<?php
+    if(!isset($_SESSION)) {
+        session_start();
+    }
+    $auth = $_SESSION['login'] ?? false;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +31,11 @@
                         <a class="d-block text-white fs-3 text-center" href="anuncios.php">Anuncios</a>
                         <a class="d-block text-white fs-3 text-center" href="blog.php">Blog</a>
                         <a class="d-block text-white fs-3 text-center" href="contacto.php">Contacto</a>
+                        <?php if($auth): ?>
+                            <a class="d-block text-white fs-3 text-center" href="cerrar-sesion.php">Cerrar Sesión</a>
+                        <?php else: ?>
+                            <a class="d-block text-white fs-3 text-center" href="login.php">Iniciar Sesión</a>
+                        <?php endif; ?>
                     </nav> <!--Anteriormente estaba la clase navegacion-->
                 </div>     
             </div> <!--.flex (anteirormente estaba la clase barra)--> 
